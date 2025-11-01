@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://postsoni.netlify.app/sitemap.xml
+Sitemap: https://postsoni.github.io/postori-site/sitemap.xml
