@@ -1,38 +1,44 @@
 // ===== 訪問者カウンター（Persistent Storage使用） =====
 async function initVisitorCounter() {
     try {
-        // ユニークな訪問者IDを生成または取得
+        // ユニークな訪問者IDを生成または取得（ブラウザごとに固有）
         let visitorId = localStorage.getItem('visitorId');
         if (!visitorId) {
             visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             localStorage.setItem('visitorId', visitorId);
         }
         
-        // 既に訪問済みかチェック
-        const hasVisited = localStorage.getItem('hasVisited');
-        
         // 総訪問者数を取得
         let totalVisitors = 0;
+        let visitorsList = [];
+        
         try {
-            const result = await window.storage.get('total_visitors', true);
+            // 訪問者リストを取得
+            const result = await window.storage.get('visitors_list', true);
             if (result && result.value) {
-                totalVisitors = parseInt(result.value);
+                visitorsList = JSON.parse(result.value);
+                totalVisitors = visitorsList.length;
             }
         } catch (error) {
             console.log('初回カウンター作成');
+            visitorsList = [];
             totalVisitors = 0;
         }
         
+        // このvisitorIdが既に訪問済みかチェック
+        const hasVisited = visitorsList.includes(visitorId);
+        
         // 初回訪問の場合のみカウントアップ
         if (!hasVisited) {
-            totalVisitors += 1;
+            visitorsList.push(visitorId);
+            totalVisitors = visitorsList.length;
             
             // 永続ストレージに保存（shared: true で全ユーザーで共有）
-            await window.storage.set('total_visitors', totalVisitors.toString(), true);
+            await window.storage.set('visitors_list', JSON.stringify(visitorsList), true);
             
-            // このユーザーが訪問済みであることを記録
-            localStorage.setItem('hasVisited', 'true');
-            localStorage.setItem('visitDate', new Date().toISOString());
+            console.log('新規訪問者を記録しました。総訪問者数:', totalVisitors);
+        } else {
+            console.log('既存の訪問者です。総訪問者数:', totalVisitors);
         }
         
         // カウンターに表示
@@ -54,22 +60,22 @@ async function initVisitorCounter() {
 
 // フォールバック用カウンター（window.storageが使えない場合）
 function fallbackCounter() {
-    let visitorCount = localStorage.getItem('visitorCount');
+    let visitorCount = localStorage.getItem('fallbackVisitorCount');
     
     if (!visitorCount) {
         visitorCount = 1;
     } else {
-        visitorCount = parseInt(visitorCount) + 1;
+        visitorCount = parseInt(visitorCount);
     }
     
-    localStorage.setItem('visitorCount', visitorCount);
+    localStorage.setItem('fallbackVisitorCount', visitorCount);
     
     const counterElement = document.getElementById('visitorCount');
     const counterText = document.getElementById('visitorText');
     
     if (counterElement && counterText) {
         animateCounter(counterElement, 0, visitorCount, 1000);
-        counterText.textContent = 'あなたは今までで ' + visitorCount.toLocaleString() + ' 人目の訪問者です（ローカルカウント）';
+        counterText.textContent = 'あなたは今までで ' + visitorCount.toLocaleString() + ' 人目の訪問者です';
     }
 }
 
@@ -112,8 +118,41 @@ function initTabs() {
     const navItems = document.querySelectorAll('.nav-item');
     const tabContents = document.querySelectorAll('.tab-content');
     
+    // デバイスがモバイルかどうかを判定
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
     // タブ切り替えの共通処理
     function switchTab(targetTab) {
+        // モバイルの場合：スクロール処理
+        if (isMobile()) {
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                // 目次を閉じる（モバイルメニューがあれば）
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar) {
+                    sidebar.style.display = 'none';
+                }
+                
+                // 対象セクションまでスクロール
+                targetContent.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // ナビゲーションのハイライトを更新
+                navItems.forEach(nav => nav.classList.remove('active'));
+                navItems.forEach(nav => {
+                    if (nav.getAttribute('data-tab') === targetTab) {
+                        nav.classList.add('active');
+                    }
+                });
+            }
+            return;
+        }
+        
+        // PC版：タブ切り替え処理（既存の動作）
         // 全てのナビゲーションアイテムから active クラスを削除
         navItems.forEach(nav => nav.classList.remove('active'));
         
@@ -156,6 +195,19 @@ function initTabs() {
             e.preventDefault();
             const targetTab = target.getAttribute('data-tab');
             switchTab(targetTab);
+        }
+    });
+    
+    // ウィンドウリサイズ時の処理
+    window.addEventListener('resize', function() {
+        // モバイルからPCに切り替わった場合、タブ表示に戻す
+        if (!isMobile()) {
+            // 最初のタブをアクティブにする
+            tabContents.forEach(content => content.classList.remove('active'));
+            const firstContent = tabContents[0];
+            if (firstContent) {
+                firstContent.classList.add('active');
+            }
         }
     });
 }

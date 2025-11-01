@@ -2510,3 +2510,49 @@ body {
         padding: 8px;
     }
 }
+
+/* ============================================
+   スマホ対応 - 訪問者カウンターを目次の下に配置
+============================================ */
+
+@media (max-width: 768px) {
+    /* サイドバー内の順序を変更 */
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* ナビゲーションを先に表示 */
+    .navigation {
+        order: 1;
+    }
+    
+    /* 訪問者カウンターを後に表示 */
+    .counter-display {
+        order: 2;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    /* カウンター数字を小さく */
+    .counter-number {
+        font-size: 32px;
+    }
+    
+    /* カウンターテキストを小さく */
+    .counter-text {
+        font-size: 12px;
+    }
+    
+    /* タブコンテンツをすべて表示（スクロール用） */
+    .tab-content {
+        display: block !important;
+        opacity: 1 !important;
+    }
+    
+    /* タブコンテンツ間に余白を追加 */
+    .content-section {
+        margin-bottom: 30px;
+        scroll-margin-top: 20px; /* スクロール時の上部余白 */
+    }
+}
