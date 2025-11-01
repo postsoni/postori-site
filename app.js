@@ -144,9 +144,23 @@ function initTabs() {
                 contentArea.scrollTop = 0;
             }
             
-            // スマホの場合、ページ全体も最上部にスクロール
+            // スマホの場合、コンテンツエリアの先頭までスクロール
             if (window.innerWidth <= 768) {
-                window.scrollTo(0, 0);
+                // 少し待ってからスクロール（コンテンツの描画を待つ）
+                setTimeout(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) {
+                        // コンテンツエリアの位置を取得
+                        const contentRect = contentArea.getBoundingClientRect();
+                        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                        
+                        // コンテンツエリアの上端までスクロール
+                        window.scrollTo({
+                            top: currentScroll + contentRect.top,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 100);
             }
         }
     }
