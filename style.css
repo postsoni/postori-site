@@ -2441,3 +2441,72 @@ body {
         font-size: 13px;
     }
 }
+
+
+/* ============================================
+   お問い合わせ - 商業目的ではない旨の注意書き
+============================================ */
+
+.contact-notice {
+    font-size: 14px;
+    color: #ff6b6b;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
+    padding: 12px;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe4d9 100%);
+    border-radius: 8px;
+    border: 2px solid #ffd4c4;
+}
+
+@media (max-width: 768px) {
+    .contact-notice {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+/* ============================================
+   お問い合わせ - 商業目的ではない旨の注意書き
+============================================ */
+
+.contact-notice {
+    font-size: 14px;
+    color: #ff6b6b;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
+    padding: 12px;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe4d9 100%);
+    border-radius: 8px;
+    border: 2px solid #ffd4c4;
+}
+
+@media (max-width: 768px) {
+    .contact-notice {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+
+/* ============================================
+   グッズ - 商業目的ではない旨の注意書き
+============================================ */
+
+.goods-notice {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #ff8c42;
+}
+
+@media (max-width: 768px) {
+    .goods-notice {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
