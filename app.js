@@ -207,3 +207,318 @@ function initFAQ() {
         });
     });
 }
+
+
+// ===== ページトップへ戻るボタン =====
+function initBackToTop() {
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (!backToTopButton) return;
+    
+    // スクロール時の表示/非表示
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    // クリック時の動作
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+
+// ===== ローディング画面 =====
+function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    if (!loadingScreen) return;
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 500);
+    });
+}
+
+
+// ===== ダークモード切り替え =====
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    
+    if (!darkModeToggle) return;
+    
+    // ローカルストレージから設定を読み込み
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+    
+    // クリック時の動作
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        // 設定を保存
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+}
+
+
+// ===== スムーズスクロール効果の強化 =====
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, observerOptions);
+    
+    // アニメーション対象の要素を監視
+    const animateElements = document.querySelectorAll('.content-section, .gallery-item, .roadmap-step, .testimonial-item, .faq-item');
+    animateElements.forEach(el => observer.observe(el));
+}
+
+
+// ===== 訪問者統計の可視化 =====
+async function initVisitorStats() {
+    try {
+        // 訪問者リストを取得
+        const result = await window.storage.get('visitors_list', true);
+        if (result && result.value) {
+            const visitorsList = JSON.parse(result.value);
+            const totalVisitors = visitorsList.length;
+            
+            // 統計情報を保存
+            const stats = {
+                total: totalVisitors,
+                lastUpdated: new Date().toISOString()
+            };
+            
+            console.log('訪問者統計:', stats);
+        }
+    } catch (error) {
+        console.log('統計情報の取得エラー:', error);
+    }
+}
+
+
+// ===== パンくずリスト更新 =====
+function updateBreadcrumb(sectionName) {
+    // 将来的にパンくずリストを実装する場合の準備
+    console.log('現在のセクション:', sectionName);
+}
+
+
+// ===== ページ読み込み時の初期化（更新版） =====
+document.addEventListener('DOMContentLoaded', () => {
+    // 既存の初期化
+    initTabs();
+    initFAQ();
+    initVisitorCounter();
+    
+    // 新機能の初期化
+    initBackToTop();
+    initLoadingScreen();
+    initDarkMode();
+    initScrollAnimations();
+    initVisitorStats();
+});
+
+
+// ===== サイト内検索機能 =====
+function initSiteSearch() {
+    const searchInput = document.getElementById('siteSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchResults = document.getElementById('searchResults');
+    
+    if (!searchInput || !searchBtn || !searchResults) return;
+    
+    // 検索対象のコンテンツを収集
+    function getSearchableContent() {
+        const content = [];
+        
+        // FAQを収集
+        document.querySelectorAll('.faq-item').forEach((item, index) => {
+            const question = item.querySelector('.faq-question h3')?.textContent || '';
+            const answer = item.querySelector('.faq-answer p')?.textContent || '';
+            content.push({
+                type: 'FAQ',
+                title: question,
+                content: answer,
+                section: 'faq',
+                id: index
+            });
+        });
+        
+        // 初心者向けロードマップを収集
+        document.querySelectorAll('.roadmap-step').forEach((item, index) => {
+            const title = item.querySelector('.step-title')?.textContent || '';
+            const contentText = item.querySelector('.step-content')?.textContent || '';
+            content.push({
+                type: 'ガイド',
+                title: title,
+                content: contentText,
+                section: 'roadmap',
+                id: index
+            });
+        });
+        
+        // お客様の声を収集
+        document.querySelectorAll('.testimonial-item').forEach((item, index) => {
+            const name = item.querySelector('.testimonial-name')?.textContent || '';
+            const contentText = item.querySelector('.testimonial-content')?.textContent || '';
+            content.push({
+                type: '体験談',
+                title: name,
+                content: contentText,
+                section: 'testimonials',
+                id: index
+            });
+        });
+        
+        return content;
+    }
+    
+    // 検索実行
+    function performSearch(query) {
+        if (!query || query.trim().length < 2) {
+            searchResults.innerHTML = '<p class="search-no-results">2文字以上で検索してください</p>';
+            return;
+        }
+        
+        const searchableContent = getSearchableContent();
+        const results = searchableContent.filter(item => {
+            return item.title.toLowerCase().includes(query.toLowerCase()) ||
+                   item.content.toLowerCase().includes(query.toLowerCase());
+        });
+        
+        displaySearchResults(results, query);
+    }
+    
+    // 検索結果を表示
+    function displaySearchResults(results, query) {
+        if (results.length === 0) {
+            searchResults.innerHTML = '<p class="search-no-results">「' + query + '」に一致する結果が見つかりませんでした</p>';
+            return;
+        }
+        
+        let html = '';
+        results.slice(0, 5).forEach(result => {
+            const excerpt = result.content.substring(0, 80) + '...';
+            html += `
+                <div class="search-result-item" onclick="navigateToResult('${result.section}')">
+                    <div class="search-result-title">${result.type}: ${result.title}</div>
+                    <div class="search-result-excerpt">${excerpt}</div>
+                </div>
+            `;
+        });
+        
+        searchResults.innerHTML = html;
+    }
+    
+    // 検索結果をクリック
+    window.navigateToResult = function(sectionId) {
+        const navItem = document.querySelector(`[data-tab="${sectionId}"]`);
+        if (navItem) {
+            navItem.click();
+            searchResults.innerHTML = '';
+            searchInput.value = '';
+        }
+    };
+    
+    // 検索ボタンクリック
+    searchBtn.addEventListener('click', () => {
+        performSearch(searchInput.value);
+    });
+    
+    // Enterキーで検索
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch(searchInput.value);
+        }
+    });
+    
+    // リアルタイム検索（入力中）
+    let searchTimeout;
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            if (searchInput.value.trim().length >= 2) {
+                performSearch(searchInput.value);
+            } else {
+                searchResults.innerHTML = '';
+            }
+        }, 300);
+    });
+}
+
+
+// ===== パンくずリスト更新機能の改善 =====
+function updateBreadcrumbEnhanced(sectionId) {
+    const sectionNames = {
+        'top': 'TOP',
+        'gallery': '活動ギャラリー',
+        'roadmap': '初めての方へ',
+        'profile': 'プロフィール',
+        'sns': 'SNS',
+        'activity': '活動記録',
+        'goods': 'グッズ',
+        'support': 'RC支援・サポート',
+        'testimonials': 'サポートを受けた方の声',
+        'faq': 'よくある質問',
+        'contact': 'お問い合わせ'
+    };
+    
+    const sectionName = sectionNames[sectionId] || sectionId;
+    console.log('現在のページ:', sectionName);
+    
+    // ページタイトルも更新
+    document.title = sectionName + ' - ぽすとそに工房';
+}
+
+
+// ===== ページ読み込み時の初期化（最終版） =====
+document.addEventListener('DOMContentLoaded', () => {
+    // 既存の初期化
+    initTabs();
+    initFAQ();
+    initVisitorCounter();
+    
+    // 新機能の初期化
+    initBackToTop();
+    initLoadingScreen();
+    initDarkMode();
+    initScrollAnimations();
+    initVisitorStats();
+    
+    // 残り3つの機能初期化
+    initSiteSearch();
+    
+    // タブ切り替え時にパンくずリスト更新
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            updateBreadcrumbEnhanced(targetTab);
+        });
+    });
+});

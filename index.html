@@ -140,6 +140,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&family=Zen+Kurenaido&family=Shippori+Antique&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ローディング画面 -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <img src="postsoni-icon.png" alt="ロゴ" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">読み込み中...</p>
+        </div>
+    </div>
+
     <!-- ヘッダー -->
     <header class="site-header">
         <div class="header-image">
@@ -153,6 +162,11 @@
                 </a>
             </div>
             <p class="subtitle">RC技術と情熱の融合 - 次世代へ繋ぐラジコン文化</p>
+            <!-- ダークモード切り替えボタン -->
+            <button id="darkModeToggle" class="dark-mode-toggle" title="ダークモード切り替え">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon">🌙</span>
+            </button>
         </div>
     </header>
 
@@ -160,6 +174,16 @@
     <div class="main-wrapper">
         <!-- 左サイドバー：ナビゲーション -->
         <aside class="sidebar">
+            <!-- サイト内検索 -->
+            <div class="search-box">
+                <h3 class="search-title">🔍 サイト内検索</h3>
+                <div class="search-input-wrapper">
+                    <input type="text" id="siteSearch" class="search-input" placeholder="FAQやブログ記事を検索...">
+                    <button id="searchBtn" class="search-btn">検索</button>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            
             <div class="nav-card">
                 <h3 class="nav-title">📌 目次</h3>
                 <nav class="navigation">
@@ -195,6 +219,11 @@
             
             <!-- TOPセクション -->
             <section id="top" class="content-section tab-content active">
+                <!-- パンくずリスト -->
+                <nav class="breadcrumb" aria-label="パンくずリスト">
+                    <span class="breadcrumb-item">🏠 TOP</span>
+                </nav>
+                
                 <div class="section-header">
                     <h2 class="section-title">🏠 ようこそ、ぽすとそに工房へ</h2>
                 </div>
@@ -319,6 +348,13 @@
 
             <!-- 活動ギャラリーセクション -->
             <section id="gallery" class="content-section tab-content">
+                <!-- パンくずリスト -->
+                <nav class="breadcrumb" aria-label="パンくずリスト">
+                    <a href="#" data-tab="top" class="breadcrumb-link">🏠 TOP</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-item">📸 活動ギャラリー</span>
+                </nav>
+                
                 <div class="section-header">
                     <h2 class="section-title">📸 今までの活動ギャラリー</h2>
                 </div>
@@ -326,47 +362,47 @@
                     <div class="gallery-grid">
                         <!-- 画像1 -->
                         <div class="gallery-item">
-                            <img src="work1.jpg" alt="OSエンジン分解清掃メンテナンス" class="gallery-image">
+                            <img src="work1.jpg" alt="OSエンジン分解清掃メンテナンス" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">平成初期の陸モノOSエンジンを分解清掃メンテで再始動可能を確認しました。</p>
                         </div>
                         
                         <!-- 画像2（修理前） -->
                         <div class="gallery-item gallery-related">
                             <div class="related-badge">修理前</div>
-                            <img src="work2.jpg" alt="変速ギア故障" class="gallery-image">
+                            <img src="work2.jpg" alt="変速ギア故障" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">こちらは変速ギアがなめています</p>
                         </div>
                         
                         <!-- 画像3（修理後） -->
                         <div class="gallery-item gallery-related">
                             <div class="related-badge related-after">修理後</div>
-                            <img src="work3.jpg" alt="変速ギア交換完了" class="gallery-image">
+                            <img src="work3.jpg" alt="変速ギア交換完了" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">変速ギアを交換し、走行チェック後変速タイミングの設定完了</p>
                         </div>
                         
                         <!-- 画像4（墜落直後） -->
                         <div class="gallery-item gallery-related">
                             <div class="related-badge">墜落直後</div>
-                            <img src="work4.jpg" alt="ヘリ墜落" class="gallery-image">
+                            <img src="work4.jpg" alt="ヘリ墜落" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">過去の動画でヘリが墜落した瞬間の切り抜き（私の機体で墜落した機体名はJRのE8です。なかなか今から見ると古くなってきた機体でパーツも少ないです。）</p>
                         </div>
                         
                         <!-- 画像5（修理完了） -->
                         <div class="gallery-item gallery-related">
                             <div class="related-badge related-after">修理完了</div>
-                            <img src="work5.jpg" alt="ヘリ修理完了" class="gallery-image">
+                            <img src="work5.jpg" alt="ヘリ修理完了" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">現在発売されているヘリとMIXして、飛行可能状態にしております。詳しくはYouTubeの遊覧フライト動画にて閲覧可能です。</p>
                         </div>
                         
                         <!-- 画像6 -->
                         <div class="gallery-item">
-                            <img src="work6.jpg" alt="K110S分解清掃メンテナンス" class="gallery-image">
+                            <img src="work6.jpg" alt="K110S分解清掃メンテナンス" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">K110Sを分解清掃メンテを行い、マストの軸が見えないレベルでずれていることを確認。修理中の画像です。</p>
                         </div>
                         
                         <!-- 画像7 -->
                         <div class="gallery-item">
-                            <img src="work7.jpg" alt="ファンフライ機制作" class="gallery-image">
+                            <img src="work7.jpg" alt="ファンフライ機制作" class="gallery-image" loading="lazy">
                             <p class="gallery-caption">次世代のファンフライ機の制作です。作成の説明書は日本語ではありません、少々難しい図面でも作成しております。（バルサ機も同じように行えます。）</p>
                         </div>
                     </div>
@@ -641,7 +677,7 @@
                         <h4 class="note-embed-title">📌 最新のブログ記事</h4>
                         <iframe 
                             class="note-embed-iframe"
-                            src="https://note.com/embed/notes/n307e2dcd7e24" 
+                            src="https://note.com/embed/notes/ne76ec655c894" 
                             style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" 
                             height="400">
                         </iframe>
@@ -925,6 +961,11 @@
 
         </main>
     </div>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="backToTop" class="back-to-top" title="トップへ戻る">
+        <span>↑</span>
+    </button>
 
     <!-- フッター -->
     <footer class="site-footer">

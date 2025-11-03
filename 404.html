@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページが見つかりません - ぽすとそに工房</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-404-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .error-404-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .error-404-title {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 0;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .error-404-subtitle {
+            font-size: 24px;
+            color: #666;
+            margin: 20px 0;
+        }
+        
+        .error-404-message {
+            font-size: 16px;
+            color: #888;
+            max-width: 500px;
+            margin: 20px auto;
+            line-height: 1.8;
+        }
+        
+        .error-404-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .error-404-button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff9a76 0%, #ff6b6b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .error-404-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        .error-404-button.secondary {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe4d9 100%);
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-404-container">
+        <div class="error-404-icon">🛩️</div>
+        <h1 class="error-404-title">404</h1>
+        <h2 class="error-404-subtitle">ページが見つかりません</h2>
+        <p class="error-404-message">
+            お探しのページは存在しないか、移動した可能性があります。<br>
+            URLをご確認いただくか、トップページからお探しください。
+        </p>
+        <div class="error-404-buttons">
+            <a href="index.html" class="error-404-button">
+                🏠 トップページへ戻る
+            </a>
+            <a href="index.html#contact" class="error-404-button secondary">
+                ✉️ お問い合わせ
+            </a>
+        </div>
+    </div>
+</body>
+</html>
