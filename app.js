@@ -504,6 +504,15 @@ function initPWA() {
     }
 }
 
+// ===== お問い合わせフォームを開く関数 =====
+function openContactForm() {
+    // contact.htmlを新しいタブで開く
+    window.open('contact.html', '_blank');
+}
+
+// グローバルに公開
+window.openContactForm = openContactForm;
+
 // ===== ページ読み込み時の初期化 =====
 document.addEventListener('DOMContentLoaded', () => {
     initTabs();
