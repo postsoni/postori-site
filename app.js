@@ -233,6 +233,20 @@ const translations = {
             comingSoon: 'Coming Soon...',
             workInProgress: 'ホームページの翻訳作業をしております。少々お待ちください。'
         },
+        gallerySection: {
+            title: '今までの活動ギャラリー',
+            caption1: '平成初期の陸モノOSエンジンを分解清掃メンテで再始動可能を確認しました。',
+            caption2: 'こちらは変速ギアがなめています',
+            caption3: '変速ギアを交換し、走行チェック後変速タイミングの設定完了',
+            caption4: '過去の動画でヘリが墜落した瞬間の切り抜き（私の機体で墜落した機体名はJRのE8です。なかなか今から見ると古くなってきた機体でパーツも少ないです。）',
+            caption5: '現在発売されているヘリとMIXして、飛行可能状態にしております。詳しくはYouTubeの遊覧フライト動画にて閲覧可能です。',
+            caption6: 'K110Sを分解清掃メンテを行い、マストの軸が見えないレベルでずれていることを確認。修理中の画像です。',
+            caption7: '次世代のファンフライ機の制作です。作成の説明書は日本語ではありません、少々難しい図面でも作成しております。（バルサ機も同じように行えます。）',
+            badgeBefore: '修理前',
+            badgeAfter: '修理後',
+            badgeCompleted: '修理完了',
+            badgeCrashed: '墜落直後'
+        },
         topSection: {
             title: 'ようこそ、ぽすとそに工房へ',
             greetingTitle: 'ぽすとそに ご挨拶',
@@ -287,6 +301,20 @@ const translations = {
             comingSoon: 'Coming Soon...',
             workInProgress: 'We are working on translating the website. Please wait a moment.'
         },
+        gallerySection: {
+            title: 'Activity Gallery',
+            caption1: 'Confirmed restart of early Heisei era land OS engine after disassembly, cleaning and maintenance.',
+            caption2: 'This gear is worn out',
+            caption3: 'Replaced the transmission gear, completed gear timing settings after running check',
+            caption4: 'Frame from past video of helicopter crash (My crashed aircraft is JR E8. It\'s becoming quite old now with few parts available.)',
+            caption5: 'Mixed with currently available helicopters to make it flight-ready. Details available in YouTube flight videos.',
+            caption6: 'Disassembled and cleaned K110S, confirmed mast shaft misalignment at invisible level. Photo during repair.',
+            caption7: 'Building next-generation fun fly aircraft. Instructions are not in Japanese, but we can build even with difficult diagrams. (Same process for balsa aircraft.)',
+            badgeBefore: 'Before Repair',
+            badgeAfter: 'After Repair',
+            badgeCompleted: 'Repair Complete',
+            badgeCrashed: 'Just Crashed'
+        },
         topSection: {
             title: 'Welcome to Postsoni Workshop',
             greetingTitle: 'About Postsoni',
@@ -340,6 +368,20 @@ const translations = {
             title: '最新活动报告',
             comingSoon: '即将推出...',
             workInProgress: '我们正在翻译网站。请稍候。'
+        },
+        gallerySection: {
+            title: '活动画廊',
+            caption1: '确认了平成初期陆地OS发动机经过拆解清洁维护后可重新启动。',
+            caption2: '这个变速齿轮已磨损',
+            caption3: '更换变速齿轮，行驶检查后完成变速时机设定',
+            caption4: '过去视频中直升机坠落瞬间的截图（我坠落的机体是JR的E8。现在看来已经相当老旧，零件也很少。）',
+            caption5: '与现在销售的直升机混合使用，使其处于可飞行状态。详情请参阅YouTube的飞行视频。',
+            caption6: '对K110S进行拆解清洁维护，确认桅杆轴在不可见程度上偏移。维修中的照片。',
+            caption7: '下一代趣味飞行机的制作。制作说明书不是日语，即使是较难的图纸也在制作中。（桐木机也可以同样制作。）',
+            badgeBefore: '维修前',
+            badgeAfter: '维修后',
+            badgeCompleted: '维修完成',
+            badgeCrashed: '刚坠落'
         },
         topSection: {
             title: '欢迎来到Postsoni工作室',
@@ -432,6 +474,30 @@ function setLanguage(lang) {
     if (newsTitle) newsTitle.textContent = '📰 ' + trans.newsSection.title;
     if (newsComingSoon) newsComingSoon.textContent = trans.newsSection.comingSoon;
     if (newsText) newsText.textContent = trans.newsSection.workInProgress;
+    
+    // 活動ギャラリーセクション
+    const galleryTitle = document.querySelector('#gallery .section-title');
+    if (galleryTitle) galleryTitle.textContent = '📸 ' + trans.gallerySection.title;
+    
+    // 活動ギャラリー - 画像キャプション
+    const galleryCaptions = document.querySelectorAll('#gallery .gallery-caption');
+    if (galleryCaptions[0]) galleryCaptions[0].textContent = trans.gallerySection.caption1;
+    if (galleryCaptions[1]) galleryCaptions[1].textContent = trans.gallerySection.caption2;
+    if (galleryCaptions[2]) galleryCaptions[2].textContent = trans.gallerySection.caption3;
+    if (galleryCaptions[3]) galleryCaptions[3].textContent = trans.gallerySection.caption4;
+    if (galleryCaptions[4]) galleryCaptions[4].textContent = trans.gallerySection.caption5;
+    if (galleryCaptions[5]) galleryCaptions[5].textContent = trans.gallerySection.caption6;
+    if (galleryCaptions[6]) galleryCaptions[6].textContent = trans.gallerySection.caption7;
+    
+    // 活動ギャラリー - バッジ
+    const galleryBadges = document.querySelectorAll('#gallery .related-badge');
+    galleryBadges.forEach(badge => {
+        const text = badge.textContent.trim();
+        if (text === '修理前') badge.textContent = trans.gallerySection.badgeBefore;
+        else if (text === '修理後' || text === 'After Repair' || text === '维修后') badge.textContent = trans.gallerySection.badgeAfter;
+        else if (text === '修理完了' || text === 'Repair Complete' || text === '维修完成') badge.textContent = trans.gallerySection.badgeCompleted;
+        else if (text === '墜落直後' || text === 'Just Crashed' || text === '刚坠落') badge.textContent = trans.gallerySection.badgeCrashed;
+    });
     
     // TOPセクション - タイトル
     const topTitle = document.querySelector('#top .section-title');
