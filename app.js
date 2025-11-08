@@ -247,6 +247,31 @@ const translations = {
             badgeCompleted: '修理完了',
             badgeCrashed: '墜落直後'
         },
+        roadmapSection: {
+            title: 'ラジコンを始める5つのステップ',
+            intro: 'RCを始めたい方、復帰したい方に向けた、安心のステップガイドです。あなたのペースに合わせてサポートします。',
+            step1Title: '💬 相談',
+            step1Item1: '初期にかかるRCに対しての費用相談！',
+            step1Item2: '連絡に気づき次第即日決定を目指します！（悩まれる場合は、もちろんゆっくりで問題ございません。）',
+            step1Item3: '具体的にあなたの興味がわいたラジコンの種類の話を聞きます、それを元に何が必要かを一緒に検討します。',
+            step2Title: '🎯 選ぶRCジャンル',
+            step2Item1: '選んだジャンルにおいての平均の始める初期費用を概算で出しつつ、相談を続けます。',
+            step2Item2: '同じく即日決定を目指します！（ここで悩まれても、ゆっくりペースを合わせます。）',
+            step2Item3: '初心者なのか、復帰者なのかを区分けし、レベルに応じて選ぶRCの選定を一緒に検討します。',
+            step3Title: '🤝 購入後のサポート',
+            step3Item1: '選んだ内容に応じたRCの走行、飛行可能な場所を一緒に検討します。（事前検討も可能です。）',
+            step3Item2: '近場のクラブを一緒に検討します。（クラブはまだ…という方にも場所のアドバイスを続けます。）',
+            step3Item3: '現在の法律に合わせて、適切な場所を選びます。',
+            step3Item4: '近場であれば、一人ひとりに合わせて場所を決めて待ち合わせなどをし、一緒に走るところや飛行するところを見て怖くないようにサポートします。（遠方であれば、初めて遊んだときにどのようなことが起きたか困ったかなどを聞き、改善をサポートします。）',
+            step4Title: '🔧 基本メンテナンス',
+            step4Item1: 'メンテナンスに必要なものを、お好きなRCに合わせて予算別で一緒に検討します。（おすすめを今までの私の知識とAIを合わせて、主観が入らないように適切なものを選んでいきます。もちろん、事前検討も可能です。）',
+            step4Item2: 'メンテナンスの基礎知識などをお伝えし、自分でもRCを触れるようにサポートします。',
+            step5Title: '🚀 RCの世界へ',
+            step5Item1: 'STEP1～4まで終えた方はおそらく1人でも遊べる状況になっているはずです。復帰者のパターンでも、現在のRCの知識に追いつける状態にまでなっていると思われます。',
+            step5Item2: '近場であれば、お困りの際はいつでもお声をかけてください。遠方でも、同じくなるべくすぐに対応します。',
+            step5Item3: 'これでRCについての初期段階は終了です！マイペースに遊ぶもよし、たくさん練習するもよし、いざRCの世界へ！',
+            note: '※目安のSTEPです。それぞれの遊び方のニーズに合わせてどこまでも真摯に向き合います。いつでもお問い合わせフォームからご連絡ください。'
+        },
         topSection: {
             title: 'ようこそ、ぽすとそに工房へ',
             greetingTitle: 'ぽすとそに ご挨拶',
@@ -315,6 +340,31 @@ const translations = {
             badgeCompleted: 'Repair Complete',
             badgeCrashed: 'Just Crashed'
         },
+        roadmapSection: {
+            title: 'Getting Started with RC in 5 Steps',
+            intro: 'A reliable step guide for those who want to start or return to RC. We support you at your own pace.',
+            step1Title: '💬 Consultation',
+            step1Item1: 'Initial cost consultation for RC!',
+            step1Item2: 'We aim for same-day decision once we notice your contact! (If you need time to think, no problem at all.)',
+            step1Item3: 'We listen to what type of RC interests you and together determine what you need.',
+            step2Title: '🎯 Choose RC Genre',
+            step2Item1: 'We provide average initial cost estimates for your chosen genre while continuing consultation.',
+            step2Item2: 'We also aim for same-day decision here! (If you need more time, we match your pace.)',
+            step2Item3: 'We identify whether you\'re a beginner or returning hobbyist and help select RC models appropriate for your level.',
+            step3Title: '🤝 Post-Purchase Support',
+            step3Item1: 'We discuss suitable driving/flying locations based on your chosen RC. (Pre-planning possible.)',
+            step3Item2: 'We help find nearby clubs. (For those not ready for clubs, we continue to advise on locations.)',
+            step3Item3: 'We select appropriate locations according to current regulations.',
+            step3Item4: 'For nearby areas, we can meet at agreed locations and support you by observing running/flying to ensure comfort. (For remote areas, we listen to what happened during first use and support improvements.)',
+            step4Title: '🔧 Basic Maintenance',
+            step4Item1: 'We discuss maintenance requirements for your RC within different budgets. (We combine my experience and AI to select appropriate items objectively. Pre-planning possible.)',
+            step4Item2: 'We share basic maintenance knowledge to help you handle your RC yourself.',
+            step5Title: '🚀 Into the RC World',
+            step5Item1: 'Those who complete STEP 1-4 should be able to enjoy RC independently. Returning hobbyists should also be up to date with current RC knowledge.',
+            step5Item2: 'For nearby areas, feel free to contact us anytime. For remote areas, we respond as quickly as possible.',
+            step5Item3: 'This completes the initial stage! Enjoy at your own pace or practice extensively - welcome to the RC world!',
+            note: '※This is a guideline. We sincerely work with you according to your play style needs. Please contact us anytime through the contact form.'
+        },
         topSection: {
             title: 'Welcome to Postsoni Workshop',
             greetingTitle: 'About Postsoni',
@@ -373,7 +423,7 @@ const translations = {
             title: '活动画廊',
             caption1: '确认了平成初期陆地OS发动机经过拆解清洁维护后可重新启动。',
             caption2: '这个变速齿轮已磨损',
-            caption3: '更换变速齿轮，行驶检查后完成变速时机设定',
+            caption3: '更换变速齿轮,行驶检查后完成变速时机设定',
             caption4: '过去视频中直升机坠落瞬间的截图（我坠落的机体是JR的E8。现在看来已经相当老旧，零件也很少。）',
             caption5: '与现在销售的直升机混合使用，使其处于可飞行状态。详情请参阅YouTube的飞行视频。',
             caption6: '对K110S进行拆解清洁维护，确认桅杆轴在不可见程度上偏移。维修中的照片。',
@@ -382,6 +432,31 @@ const translations = {
             badgeAfter: '维修后',
             badgeCompleted: '维修完成',
             badgeCrashed: '刚坠落'
+        },
+        roadmapSection: {
+            title: '开始RC的5个步骤',
+            intro: '为想要开始或回归RC的人提供的可靠步骤指南。我们将按照您的节奏提供支持。',
+            step1Title: '💬 咨询',
+            step1Item1: 'RC初期费用咨询！',
+            step1Item2: '一收到联系就争取当天决定！（如需考虑当然可以慢慢来。）',
+            step1Item3: '我们会具体了解您感兴趣的RC类型，并一起讨论需要什么。',
+            step2Title: '🎯 选择RC类型',
+            step2Item1: '为您选择的类型提供平均初期费用概算，同时继续咨询。',
+            step2Item2: '这里也争取当天决定！（如需考虑，我们会配合您的节奏。）',
+            step2Item3: '区分新手或回归者，根据水平一起选择合适的RC型号。',
+            step3Title: '🤝 购买后支持',
+            step3Item1: '根据您选择的RC内容一起讨论可行驶、飞行的场所。（事前讨论也可以。）',
+            step3Item2: '一起寻找附近的俱乐部。（对于还不想加入俱乐部的人，我们会继续提供场所建议。）',
+            step3Item3: '根据现行法律选择合适的场所。',
+            step3Item4: '如果在附近，我们可以根据每个人的情况决定场所并约定见面，一起观看行驶或飞行以确保不会害怕。（如果在远方，我们会询问第一次玩时发生了什么困难，并支持改善。）',
+            step4Title: '🔧 基本维护',
+            step4Item1: '根据您喜欢的RC，按预算一起讨论维护所需物品。（结合我的经验和AI，客观地选择合适的物品。当然也可以事前讨论。）',
+            step4Item2: '传授维护基础知识，支持您自己也能操作RC。',
+            step5Title: '🚀 进入RC世界',
+            step5Item1: '完成STEP1～4的人应该已经可以独自游玩了。即使是回归者，也应该能跟上当前的RC知识。',
+            step5Item2: '如果在附近，遇到困难时请随时联系。即使在远方，我们也会尽快回应。',
+            step5Item3: 'RC的初期阶段到此结束！可以按自己的节奏玩，也可以大量练习，欢迎进入RC世界！',
+            note: '※这是一个指南。我们会根据每个人的游玩方式需求真诚地应对。请随时通过联系表单与我们联系。'
         },
         topSection: {
             title: '欢迎来到Postsoni工作室',
@@ -426,7 +501,8 @@ function initLanguageSwitcher() {
     setLanguage(currentLang);
     langButtons.forEach(btn => {
         if (btn.getAttribute('data-lang') === currentLang) btn.classList.add('active');
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
             const lang = this.getAttribute('data-lang');
             langButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
@@ -493,7 +569,7 @@ function setLanguage(lang) {
     const galleryBadges = document.querySelectorAll('#gallery .related-badge');
     galleryBadges.forEach(badge => {
         const text = badge.textContent.trim();
-        if (text === '修理前') badge.textContent = trans.gallerySection.badgeBefore;
+        if (text === '修理前' || text === 'Before Repair' || text === '维修前') badge.textContent = trans.gallerySection.badgeBefore;
         else if (text === '修理後' || text === 'After Repair' || text === '维修后') badge.textContent = trans.gallerySection.badgeAfter;
         else if (text === '修理完了' || text === 'Repair Complete' || text === '维修完成') badge.textContent = trans.gallerySection.badgeCompleted;
         else if (text === '墜落直後' || text === 'Just Crashed' || text === '刚坠落') badge.textContent = trans.gallerySection.badgeCrashed;
@@ -575,6 +651,54 @@ function setLanguage(lang) {
     // TOPセクション - CTAボタン
     const ctaBtn = document.querySelector('.cta-primary');
     if (ctaBtn) ctaBtn.textContent = '👉 ' + trans.topSection.ctaContact;
+    
+    // 初めての方へセクション
+    const roadmapTitle = document.querySelector('#roadmap .section-title');
+    const roadmapIntro = document.querySelector('#roadmap .roadmap-intro');
+    if (roadmapTitle) roadmapTitle.textContent = '🛤️ ' + trans.roadmapSection.title;
+    if (roadmapIntro) roadmapIntro.textContent = trans.roadmapSection.intro;
+    
+    // 初めての方へ - STEP 1-5のタイトル
+    const stepTitles = document.querySelectorAll('#roadmap .step-title');
+    if (stepTitles[0]) stepTitles[0].textContent = trans.roadmapSection.step1Title;
+    if (stepTitles[1]) stepTitles[1].textContent = trans.roadmapSection.step2Title;
+    if (stepTitles[2]) stepTitles[2].textContent = trans.roadmapSection.step3Title;
+    if (stepTitles[3]) stepTitles[3].textContent = trans.roadmapSection.step4Title;
+    if (stepTitles[4]) stepTitles[4].textContent = trans.roadmapSection.step5Title;
+    
+    // 初めての方へ - STEP 1のリスト項目（3項目）
+    const step1Items = document.querySelectorAll('#roadmap .roadmap-step:nth-child(2) .step-list li');
+    if (step1Items[0]) step1Items[0].textContent = trans.roadmapSection.step1Item1;
+    if (step1Items[1]) step1Items[1].textContent = trans.roadmapSection.step1Item2;
+    if (step1Items[2]) step1Items[2].textContent = trans.roadmapSection.step1Item3;
+    
+    // 初めての方へ - STEP 2のリスト項目（3項目）
+    const step2Items = document.querySelectorAll('#roadmap .roadmap-step:nth-child(3) .step-list li');
+    if (step2Items[0]) step2Items[0].textContent = trans.roadmapSection.step2Item1;
+    if (step2Items[1]) step2Items[1].textContent = trans.roadmapSection.step2Item2;
+    if (step2Items[2]) step2Items[2].textContent = trans.roadmapSection.step2Item3;
+    
+    // 初めての方へ - STEP 3のリスト項目（4項目）
+    const step3Items = document.querySelectorAll('#roadmap .roadmap-step:nth-child(4) .step-list li');
+    if (step3Items[0]) step3Items[0].textContent = trans.roadmapSection.step3Item1;
+    if (step3Items[1]) step3Items[1].textContent = trans.roadmapSection.step3Item2;
+    if (step3Items[2]) step3Items[2].textContent = trans.roadmapSection.step3Item3;
+    if (step3Items[3]) step3Items[3].textContent = trans.roadmapSection.step3Item4;
+    
+    // 初めての方へ - STEP 4のリスト項目（2項目）
+    const step4Items = document.querySelectorAll('#roadmap .roadmap-step:nth-child(5) .step-list li');
+    if (step4Items[0]) step4Items[0].textContent = trans.roadmapSection.step4Item1;
+    if (step4Items[1]) step4Items[1].textContent = trans.roadmapSection.step4Item2;
+    
+    // 初めての方へ - STEP 5のリスト項目（3項目）
+    const step5Items = document.querySelectorAll('#roadmap .roadmap-step:nth-child(6) .step-list li');
+    if (step5Items[0]) step5Items[0].textContent = trans.roadmapSection.step5Item1;
+    if (step5Items[1]) step5Items[1].textContent = trans.roadmapSection.step5Item2;
+    if (step5Items[2]) step5Items[2].textContent = trans.roadmapSection.step5Item3;
+    
+    // 初めての方へ - 注記
+    const roadmapNote = document.querySelector('#roadmap .roadmap-note');
+    if (roadmapNote) roadmapNote.textContent = trans.roadmapSection.note;
 }
 
 function initPWA() {
@@ -587,7 +711,6 @@ function initPWA() {
 
 // ===== お問い合わせフォームを開く関数 =====
 function openContactForm() {
-    // contact.htmlを新しいタブで開く
     window.open('contact.html', '_blank');
 }
 
