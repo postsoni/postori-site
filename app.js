@@ -366,7 +366,14 @@ const translations = {
             achievement6Label: '対応メーカー',
             achievement6Sublabel: '多様な経験',
             makersTitle: '🔧 対応可能メーカー（一部）',
-            makersNote: '※記載以外のメーカーもお気軽にご相談ください'
+            makersNote: '※記載以外のメーカーもお気軽にご相談ください',
+            passionTitle: '💭 ラジコン文化への想い',
+            passionText1: '私がこの活動を続ける理由は、シンプルです。日本からラジコンという文化が消えてほしくない。ただそれだけです。',
+            passionText2: 'ラジコンを取り巻く現実は厳しいものがあります。高齢化が進み、若い世代は別の娯楽に流れ、走らせたり飛ばしたりできる場所も年々減っています。「ラジコンは趣味として高級品」「敷居が高い」「初心者お断り」というイメージが先行し、始める前から諦めてしまう人も少なくありません。SNS交流やゲームorゲーム実況が主流の今、手を動かして何かを作り上げる楽しさは、なかなか伝わりにくい時代です。',
+            passionText3: 'それでも、私はこの文化を記録し続けます。',
+            passionText4: 'たとえ今の時代に多くの人を呼び込めなくても、技術や知識を丁寧に残しておくことで、いつか誰かがそれを見つけてくれるかもしれない。10年後か、50年後か、もしかしたら私が生きていない未来かもしれません。それでも、ネットという海に「タイムカプセル」として潜らせておけば、必要とする誰かに届く可能性がある。そう信じています。',
+            passionText5: 'この活動は、商売ではなく、個人的な想いで始まった活動です。睡眠が不安定な中での活動であり、決して派手なものではありません。それでも、18年間ラジコンと向き合ってきた経験と、100台以上の修理実績があります。それらを記録し、共有し、次世代へ繋ぐ。それが、今の私にできることです。',
+            passionText6: 'もしあなたが「ラジコンをやってみたい」「昔やっていたけど、また始めたい」と少しでも思ってくださったなら、それだけで嬉しいです。ともに、この文化を歩んでいきましょう。'
         },
         snsSection: {
             title: 'SNS・チャンネル',
@@ -598,7 +605,14 @@ const translations = {
             achievement6Label: 'Manufacturers',
             achievement6Sublabel: 'Diverse experience',
             makersTitle: '🔧 Compatible Manufacturers (Partial)',
-            makersNote: '※Feel free to inquire about manufacturers not listed'
+            makersNote: '※Feel free to inquire about manufacturers not listed',
+            passionTitle: '💭 Passion for RC Culture',
+            passionText1: 'The reason I continue this activity is simple. I don\'t want RC culture to disappear from Japan. That\'s all.',
+            passionText2: 'The reality surrounding RC is harsh. The hobby is aging, younger generations are turning to other entertainments, and places to drive or fly are decreasing year by year. Images like "RC is an expensive hobby," "high barrier to entry," and "beginners not welcome" prevail, causing many to give up before starting. In today\'s era dominated by social media and gaming/game streaming, the joy of creating something with your hands is hard to convey.',
+            passionText3: 'Still, I continue to document this culture.',
+            passionText4: 'Even if I can\'t attract many people in this era, by carefully preserving techniques and knowledge, someone might find them someday. Maybe in 10 years, 50 years, or perhaps in a future I won\'t see. Still, I believe that by letting it drift as a "time capsule" in the ocean of the internet, it might reach someone who needs it.',
+            passionText5: 'This activity isn\'t business—it started from personal passion. It\'s conducted with unstable sleep patterns and is far from glamorous. Yet, I have 18 years of RC experience and over 100 repair cases. Recording, sharing, and passing these to the next generation—that\'s what I can do now.',
+            passionText6: 'If you\'ve thought even a little "I want to try RC" or "I used to do it, maybe I\'ll start again," that alone makes me happy. Let\'s walk this culture together.'
         },
         snsSection: {
             title: 'SNS & Channels',
@@ -830,7 +844,14 @@ const translations = {
             achievement6Label: '制造商',
             achievement6Sublabel: '多样经验',
             makersTitle: '🔧 支持的制造商（部分）',
-            makersNote: '※未列出的制造商也请随时咨询'
+            makersNote: '※未列出的制造商也请随时咨询',
+            passionTitle: '💭 对RC文化的热爱',
+            passionText1: '我继续这项活动的理由很简单。我不希望RC文化从日本消失。就是这样。',
+            passionText2: 'RC所面临的现实是严峻的。老龄化在加剧，年轻一代转向其他娱乐，可以驾驶或飞行的场所也在逐年减少。"RC作为爱好是高级品"、"门槛高"、"不欢迎初学者"等印象先行，许多人在开始前就放弃了。在社交媒体和游戏或游戏实况主导的今天，用手创造东西的乐趣很难传达。',
+            passionText3: '即便如此，我仍会继续记录这一文化。',
+            passionText4: '即使在这个时代无法吸引许多人，通过细心地保存技术和知识，也许有一天会有人发现它们。可能是10年后、50年后，或者是我不在世的未来。即便如此，我相信，只要将它作为"时间胶囊"沉入互联网的海洋，就有可能到达需要它的人手中。',
+            passionText5: '这项活动不是生意，而是出于个人热情开始的。在睡眠不稳定的情况下进行活动，绝不华丽。但我有18年的RC经验和100多个维修案例。记录、分享并传承给下一代——这就是我现在能做的。',
+            passionText6: '如果您哪怕有一点"想尝试RC"或"以前玩过，也许会重新开始"的想法，仅此就让我很高兴。让我们一起走过这一文化吧。'
         },
         snsSection: {
             title: '社交媒体和频道',
@@ -1242,6 +1263,17 @@ function setLanguage(lang) {
     const makersNote = document.querySelector('.makers-note');
     if (makersTitle) makersTitle.textContent = trans.profileSection.makersTitle;
     if (makersNote) makersNote.textContent = trans.profileSection.makersNote;
+    
+    // ラジコン文化への想い
+    const passionTitle = document.querySelector('.passion-title');
+    const passionTexts = document.querySelectorAll('.passion-text');
+    if (passionTitle) passionTitle.textContent = trans.profileSection.passionTitle;
+    if (passionTexts[0]) passionTexts[0].innerHTML = trans.profileSection.passionText1.replace('日本からラジコンという文化が消えてほしくない', '<strong>日本からラジコンという文化が消えてほしくない</strong>');
+    if (passionTexts[1]) passionTexts[1].textContent = trans.profileSection.passionText2;
+    if (passionTexts[2]) passionTexts[2].textContent = trans.profileSection.passionText3;
+    if (passionTexts[3]) passionTexts[3].innerHTML = trans.profileSection.passionText4.replace('ネットという海に「タイムカプセル」として潜らせておけば、必要とする誰かに届く可能性がある', '<strong>ネットという海に「タイムカプセル」として潜らせておけば、必要とする誰かに届く可能性がある</strong>');
+    if (passionTexts[4]) passionTexts[4].textContent = trans.profileSection.passionText5;
+    if (passionTexts[5]) passionTexts[5].textContent = trans.profileSection.passionText6;
     
     // SNSセクション - タイトル
     const snsTitle = document.querySelector('#sns .section-title');

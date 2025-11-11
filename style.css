@@ -3328,3 +3328,86 @@ body.dark-mode .coming-soon-text {
         flex: 1;
     }
 }
+
+/* ===================================
+   ラジコン文化への想いセクション
+   =================================== */
+
+.passion-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 154, 118, 0.1) 0%, rgba(255, 210, 200, 0.1) 100%);
+    border-radius: 12px;
+    border-left: 4px solid #ff9a76;
+}
+
+.passion-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff9a76;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.passion-content {
+    line-height: 1.9;
+}
+
+.passion-text {
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.passion-text strong {
+    color: #ff6b3d;
+    font-weight: 600;
+}
+
+.passion-closing {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(255, 154, 118, 0.3);
+    font-weight: 500;
+    color: #ff6b3d;
+    text-align: center;
+}
+
+/* ダークモード対応 */
+.dark-mode .passion-section {
+    background: linear-gradient(135deg, rgba(255, 154, 118, 0.15) 0%, rgba(255, 210, 200, 0.15) 100%);
+    border-left-color: #ff9a76;
+}
+
+.dark-mode .passion-text {
+    color: #e0e0e0;
+}
+
+.dark-mode .passion-text strong {
+    color: #ffa07a;
+}
+
+.dark-mode .passion-closing {
+    border-top-color: rgba(255, 154, 118, 0.4);
+    color: #ffa07a;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .passion-section {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .passion-title {
+        font-size: 1.3rem;
+    }
+    
+    .passion-text {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
