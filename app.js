@@ -1795,9 +1795,44 @@ function updateVisitorCounterText(lang) {
 
 function initPWA() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-            .then(() => console.log('Service Worker登録成功'))
-            .catch(err => console.log('Service Worker登録失敗:', err));
+        // ページ読み込み完了後にService Workerを登録（パフォーマンス向上）
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('[PWA] Service Worker登録成功:', registration.scope);
+                    
+                    // 更新をチェック
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        console.log('[PWA] 新しいService Workerを発見');
+                        
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // 新しいバージョンが利用可能
+                                console.log('[PWA] 新しいバージョンが利用可能です');
+                                
+                                // ユーザーに通知（オプション）
+                                if (confirm('新しいバージョンが利用可能です。更新しますか？')) {
+                                    newWorker.postMessage({ action: 'skipWaiting' });
+                                    window.location.reload();
+                                }
+                            }
+                        });
+                    });
+                })
+                .catch((err) => {
+                    console.error('[PWA] Service Worker登録失敗:', err);
+                });
+        });
+        
+        // Service Workerの制御が変わった時（更新時）
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (!refreshing) {
+                refreshing = true;
+                window.location.reload();
+            }
+        });
     }
 }
 
@@ -1812,6 +1847,47 @@ function openContactForm() {
 // グローバルに公開
 window.openContactForm = openContactForm;
 
+// ===== 画像の遅延読み込み強化 =====
+function initLazyLoadImages() {
+    // ネイティブのloading="lazy"をサポートしているかチェック
+    if ('loading' in HTMLImageElement.prototype) {
+        // すべての画像にloading="lazy"を追加
+        const images = document.querySelectorAll('img:not([loading])');
+        images.forEach(img => {
+            img.loading = 'lazy';
+        });
+    } else {
+        // loading="lazy"をサポートしていないブラウザ向けにIntersection Observerを使用
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // data-srcがあればそれを使用、なければそのまま
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // 読み込み完了のクラスを追加
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                    
+                    // 監視を停止
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px' // 画面の50px手前で読み込み開始
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    }
+}
+
 // ===== ページ読み込み時の初期化 =====
 document.addEventListener('DOMContentLoaded', () => {
     initTabs();
@@ -1824,6 +1900,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initVisitorStats();
     initSiteSearch();
     initLanguageSwitcher();
+    initLazyLoadImages(); // 画像遅延読み込み強化
     initPWA();
     
     const navItems = document.querySelectorAll('.nav-item');
