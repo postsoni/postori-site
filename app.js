@@ -212,22 +212,65 @@ function initDarkMode() {
     });
 }
 
+// ===== スクロールアニメーション（改良版） =====
 function initScrollAnimations() {
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
+    // Intersection Observer の設定
+    const observerOptions = {
+        threshold: 0.1, // 10%表示されたら発火
+        rootMargin: '0px 0px -50px 0px' // 下50px手前で発火
+    };
+    
+    // 基本的なスクロールアニメーション用のObserver
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-visible');
+                // 一度表示されたら監視を解除（パフォーマンス向上）
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    const animatedElements = document.querySelectorAll('.greeting-card, .card, .faq-item, .testimonial-card');
-    animatedElements.forEach(el => {
+    
+    // アニメーション対象の要素を監視
+    const animateElements = document.querySelectorAll('.scroll-animate');
+    animateElements.forEach(el => {
+        scrollObserver.observe(el);
+    });
+    
+    // 順次表示用のObserver（遅延付き）
+    const itemObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                itemObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // 順次表示する要素を監視
+    const animateItems = document.querySelectorAll('.scroll-animate-item');
+    animateItems.forEach(el => {
+        itemObserver.observe(el);
+    });
+    
+    // 既存の要素（互換性のため残す）
+    const legacyElements = document.querySelectorAll('.greeting-card:not(.scroll-animate), .card:not(.scroll-animate), .faq-item:not(.scroll-animate), .testimonial-card:not(.scroll-animate)');
+    legacyElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        
+        const legacyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    legacyObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        legacyObserver.observe(el);
     });
 }
 
@@ -269,6 +312,7 @@ const translations = {
     ja: {
         title: 'ぽすとそに工房',
         subtitle: 'RC技術と情熱の融合 - 次世代へ繋ぐラジコン文化',
+        loadingText: '読み込み中...',
         nav: {
             top: 'TOP', news: '最新の活動報告', gallery: '活動ギャラリー',
             roadmap: '初めての方へ', profile: 'プロフィール', sns: 'SNS',
@@ -516,6 +560,7 @@ const translations = {
     en: {
         title: 'Postsoni Workshop',
         subtitle: 'RC Technology & Passion',
+        loadingText: 'Loading...',
         nav: {
             top: 'TOP', news: 'Latest Updates', gallery: 'Gallery',
             roadmap: 'For Beginners', profile: 'Profile', sns: 'SNS',
@@ -763,6 +808,7 @@ const translations = {
     zh: {
         title: 'Postsoni工作室',
         subtitle: 'RC技术与热情的融合',
+        loadingText: '加载中...',
         nav: {
             top: '首页', news: '最新活动', gallery: '画廊',
             roadmap: '新手指南', profile: '简介', sns: '社交媒体',

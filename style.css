@@ -165,14 +165,33 @@ body {
     border-radius: 8px;
     border-left: 4px solid #ff9a76;
     font-family: 'Yomogi', cursive;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-item:hover::before {
+    left: 100%;
 }
 
 .nav-item:hover {
-    transform: translateX(5px);
+    transform: translateX(8px) scale(1.02);
     background: #ff9a76;
     color: white;
-    box-shadow: 0 4px 10px rgba(255, 154, 118, 0.3);
+    box-shadow: -3px 6px 15px rgba(255, 154, 118, 0.4);
+    border-left-width: 6px;
 }
 
 .nav-item.active {
@@ -254,6 +273,14 @@ body {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.greeting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 107, 107, 0.15);
+    border-color: #ff9a76;
 }
 
 .greeting-title {
@@ -1135,12 +1162,17 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
 }
 
 .gallery-image {
@@ -1148,6 +1180,7 @@ body {
     height: 300px;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
 }
 
 .gallery-caption {
@@ -1241,12 +1274,15 @@ body {
     background: #f8f9fa;
     border-radius: 12px;
     border-left: 5px solid #ff9a76;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
 }
 
 .roadmap-step:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(255, 154, 118, 0.2);
+    transform: translateX(10px);
+    box-shadow: -5px 8px 20px rgba(255, 154, 118, 0.25);
+    background: linear-gradient(135deg, #fff5f0 0%, #f8f9fa 100%);
+    border-left-width: 8px;
 }
 
 .roadmap-final {
@@ -2076,12 +2112,17 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
 }
 
 .visual-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+}
+
+.visual-item:hover .visual-image {
+    transform: scale(1.1);
 }
 
 .visual-image {
@@ -2089,6 +2130,7 @@ body {
     height: 250px;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
 }
 
 .visual-caption {
@@ -2174,11 +2216,21 @@ body {
     padding: 25px 15px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe4d9 100%);
+    border-color: #ff9a76;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .stat-number {
@@ -2189,6 +2241,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
 .stat-label {
@@ -2246,29 +2299,61 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .cta-primary {
     background: linear-gradient(135deg, #ff9a76 0%, #ff6b6b 100%);
     color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 .cta-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+}
+
+.cta-primary:active {
+    transform: translateY(-2px) scale(1.02);
 }
 
 .cta-secondary {
     background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
     color: #333;
     border: 2px solid #ffd4c4;
+    box-shadow: 0 4px 15px rgba(255, 154, 118, 0.2);
 }
 
 .cta-secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 154, 118, 0.3);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 154, 118, 0.4);
     background: linear-gradient(135deg, #ffd4c4 0%, #ffc4a4 100%);
+    border-color: #ff9a76;
+}
+
+.cta-secondary:active {
+    transform: translateY(-2px) scale(1.02);
 }
 
 /* スマホ対応 */
@@ -2621,6 +2706,10 @@ body {
    ローディング画面
 ============================================ */
 
+/* ============================================
+   ローディング画面（改良版）
+============================================ */
+
 .loading-screen {
     position: fixed;
     top: 0;
@@ -2632,7 +2721,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
 .loading-screen.fade-out {
@@ -2642,47 +2731,170 @@ body {
 
 .loading-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ロゴのアニメーション */
+.loading-logo-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
 }
 
 .loading-logo {
     width: 120px;
     height: 120px;
-    margin-bottom: 20px;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 107, 107, 0.3);
-    border-top: 5px solid #ff6b6b;
     border-radius: 50%;
-    margin: 20px auto;
-    animation: spin 1s linear infinite;
+    border: 4px solid #ff9a76;
+    box-shadow: 0 8px 20px rgba(255, 154, 118, 0.4);
 }
 
+.loading-logo.pulse {
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(255, 154, 118, 0.4);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 12px 30px rgba(255, 154, 118, 0.6);
+    }
+}
+
+/* RCカー走行アニメーション */
+.loading-spinner-wrapper {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin: 20px 0;
+}
+
+.spinner-track {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 154, 118, 0.3) 25%, 
+        rgba(255, 154, 118, 0.8) 50%, 
+        rgba(255, 154, 118, 0.3) 75%, 
+        transparent 100%
+    );
+    border-radius: 2px;
+    animation: trackPulse 2s ease-in-out infinite;
+}
+
+@keyframes trackPulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.spinner-car {
+    position: absolute;
+    bottom: 10px;
+    font-size: 32px;
+    animation: carDrive 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes carDrive {
+    0% {
+        left: -40px;
+        transform: translateY(0) rotate(-5deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(0) rotate(5deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    100% {
+        left: calc(100% + 40px);
+        transform: translateY(0) rotate(-5deg);
+    }
+}
+
+/* ローディングテキスト */
 .loading-text {
     font-size: 18px;
     color: #ff6b6b;
     font-weight: bold;
-    margin-top: 20px;
+    animation: textFade 1.5s ease-in-out infinite;
 }
 
-@keyframes pulse {
+@keyframes textFade {
     0%, 100% {
-        transform: scale(1);
+        opacity: 0.5;
     }
     50% {
-        transform: scale(1.1);
+        opacity: 1;
     }
 }
 
-@keyframes spin {
+/* プログレスバー */
+.loading-progress {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 154, 118, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #ff9a76, #ffa94d);
+    border-radius: 2px;
+    animation: progressMove 2s ease-in-out infinite;
+}
+
+@keyframes progressMove {
     0% {
-        transform: rotate(0deg);
+        width: 0%;
+        opacity: 0.8;
+    }
+    50% {
+        width: 70%;
+        opacity: 1;
     }
     100% {
-        transform: rotate(360deg);
+        width: 100%;
+        opacity: 0.8;
+    }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .loading-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .loading-spinner-wrapper {
+        width: 150px;
+    }
+    
+    .spinner-car {
+        font-size: 24px;
+    }
+    
+    .loading-progress {
+        width: 150px;
     }
 }
 
@@ -3517,5 +3729,148 @@ body.dark-mode .coming-soon-text {
     
     .news-section:hover {
         transform: translateX(3px);
+    }
+}
+
+/* ============================================
+   スクロールアニメーション
+============================================ */
+
+/* 基本的なアニメーションクラス */
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+}
+
+/* フェードイン */
+.fade-in {
+    transform: translateY(30px);
+}
+
+.fade-in.is-visible {
+    transform: translateY(0);
+}
+
+/* 左からスライドイン */
+.slide-in-left {
+    transform: translateX(-50px);
+}
+
+.slide-in-left.is-visible {
+    transform: translateX(0);
+}
+
+/* 右からスライドイン */
+.slide-in-right {
+    transform: translateX(50px);
+}
+
+.slide-in-right.is-visible {
+    transform: translateX(0);
+}
+
+/* スケールアップ */
+.scale-up {
+    transform: scale(0.9);
+}
+
+.scale-up.is-visible {
+    transform: scale(1);
+}
+
+/* 順次表示用（カードなど） */
+.scroll-animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 遅延アニメーション */
+.scroll-animate-item[data-delay="0"] {
+    transition-delay: 0s;
+}
+
+.scroll-animate-item[data-delay="1"] {
+    transition-delay: 0.1s;
+}
+
+.scroll-animate-item[data-delay="2"] {
+    transition-delay: 0.2s;
+}
+
+.scroll-animate-item[data-delay="3"] {
+    transition-delay: 0.3s;
+}
+
+.scroll-animate-item[data-delay="4"] {
+    transition-delay: 0.4s;
+}
+
+.scroll-animate-item[data-delay="5"] {
+    transition-delay: 0.5s;
+}
+
+/* 特殊効果 - 回転しながらフェードイン */
+.rotate-in {
+    transform: rotate(-10deg) scale(0.9);
+    opacity: 0;
+}
+
+.rotate-in.is-visible {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+
+/* 特殊効果 - ブラー効果 */
+.blur-in {
+    filter: blur(10px);
+    opacity: 0;
+}
+
+.blur-in.is-visible {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* レスポンシブ対応 - アニメーション距離を調整 */
+@media (max-width: 768px) {
+    .slide-in-left {
+        transform: translateX(-30px);
+    }
+    
+    .slide-in-right {
+        transform: translateX(30px);
+    }
+    
+    .fade-in {
+        transform: translateY(20px);
+    }
+    
+    .scroll-animate-item {
+        transform: translateY(20px);
+    }
+}
+
+/* アクセシビリティ対応 - 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animate,
+    .scroll-animate-item,
+    .fade-in,
+    .slide-in-left,
+    .slide-in-right,
+    .scale-up,
+    .rotate-in,
+    .blur-in {
+        transition: opacity 0.3s ease !important;
+        transform: none !important;
     }
 }

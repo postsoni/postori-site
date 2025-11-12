@@ -1,0 +1,24 @@
+{
+  "name": "ぽすとそに工房 - RC修理サポート",
+  "short_name": "ぽすとそに工房",
+  "description": "ラジコン修理・メンテナンス・AI活用サポート【札幌】",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ff9a76",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
