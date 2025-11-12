@@ -1795,44 +1795,9 @@ function updateVisitorCounterText(lang) {
 
 function initPWA() {
     if ('serviceWorker' in navigator) {
-        // ページ読み込み完了後にService Workerを登録（パフォーマンス向上）
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then((registration) => {
-                    console.log('[PWA] Service Worker登録成功:', registration.scope);
-                    
-                    // 更新をチェック
-                    registration.addEventListener('updatefound', () => {
-                        const newWorker = registration.installing;
-                        console.log('[PWA] 新しいService Workerを発見');
-                        
-                        newWorker.addEventListener('statechange', () => {
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                // 新しいバージョンが利用可能
-                                console.log('[PWA] 新しいバージョンが利用可能です');
-                                
-                                // ユーザーに通知（オプション）
-                                if (confirm('新しいバージョンが利用可能です。更新しますか？')) {
-                                    newWorker.postMessage({ action: 'skipWaiting' });
-                                    window.location.reload();
-                                }
-                            }
-                        });
-                    });
-                })
-                .catch((err) => {
-                    console.error('[PWA] Service Worker登録失敗:', err);
-                });
-        });
-        
-        // Service Workerの制御が変わった時（更新時）
-        let refreshing = false;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-            if (!refreshing) {
-                refreshing = true;
-                window.location.reload();
-            }
-        });
+        navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('Service Worker登録成功'))
+            .catch(err => console.log('Service Worker登録失敗:', err));
     }
 }
 
@@ -1847,47 +1812,6 @@ function openContactForm() {
 // グローバルに公開
 window.openContactForm = openContactForm;
 
-// ===== 画像の遅延読み込み強化 =====
-function initLazyLoadImages() {
-    // ネイティブのloading="lazy"をサポートしているかチェック
-    if ('loading' in HTMLImageElement.prototype) {
-        // すべての画像にloading="lazy"を追加
-        const images = document.querySelectorAll('img:not([loading])');
-        images.forEach(img => {
-            img.loading = 'lazy';
-        });
-    } else {
-        // loading="lazy"をサポートしていないブラウザ向けにIntersection Observerを使用
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // data-srcがあればそれを使用、なければそのまま
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                    
-                    // 読み込み完了のクラスを追加
-                    img.addEventListener('load', () => {
-                        img.classList.add('loaded');
-                    });
-                    
-                    // 監視を停止
-                    observer.unobserve(img);
-                }
-            });
-        }, {
-            rootMargin: '50px' // 画面の50px手前で読み込み開始
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
-    }
-}
-
 // ===== ページ読み込み時の初期化 =====
 document.addEventListener('DOMContentLoaded', () => {
     initTabs();
@@ -1900,7 +1824,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initVisitorStats();
     initSiteSearch();
     initLanguageSwitcher();
-    initLazyLoadImages(); // 画像遅延読み込み強化
+    initMobileOptimization(); // Phase 6: モバイル最適化
     initPWA();
     
     const navItems = document.querySelectorAll('.nav-item');
@@ -1910,4 +1834,134 @@ document.addEventListener('DOMContentLoaded', () => {
             updateBreadcrumbEnhanced(targetTab);
         });
     });
+});
+
+// ===== Phase 6: モバイル体験の最適化 =====
+function initMobileOptimization() {
+    // タッチデバイスの検出
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (isTouchDevice) {
+        document.body.classList.add('touch-device');
+        
+        // タップ時の視覚フィードバック
+        addTapFeedback();
+        
+        // ダブルタップズーム防止（必要に応じて）
+        preventDoubleTapZoom();
+        
+        // モバイル特有のスクロール最適化
+        optimizeMobileScroll();
+        
+        // 画面向き変更の対応
+        handleOrientationChange();
+    }
+    
+    // フォントサイズの動的調整（ユーザー補助機能）
+    adjustFontSizeForAccessibility();
+}
+
+// タップ時の視覚フィードバック
+function addTapFeedback() {
+    const interactiveElements = document.querySelectorAll(
+        '.nav-item, .cta-button, .contact-button, .faq-question, ' +
+        '.gallery-link-button, .timeline-button, button, a'
+    );
+    
+    interactiveElements.forEach(element => {
+        // タッチ開始時
+        element.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+        }, { passive: true });
+        
+        // タッチ終了時
+        element.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.opacity = '';
+            }, 150);
+        }, { passive: true });
+        
+        // タッチキャンセル時
+        element.addEventListener('touchcancel', function() {
+            this.style.opacity = '';
+        }, { passive: true });
+    });
+}
+
+// ダブルタップズーム防止（ボタン・リンクのみ）
+function preventDoubleTapZoom() {
+    let lastTouchEnd = 0;
+    
+    const buttons = document.querySelectorAll(
+        'button, .nav-item, .cta-button, .contact-button'
+    );
+    
+    buttons.forEach(button => {
+        button.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+    });
+}
+
+// モバイルスクロール最適化
+function optimizeMobileScroll() {
+    // iOS Safariでのスクロール慣性を有効化
+    if (document.body.style.webkitOverflowScrolling !== undefined) {
+        document.body.style.webkitOverflowScrolling = 'touch';
+    }
+    
+    // スクロール中のパフォーマンス向上
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        // スクロール中は一部のアニメーションを無効化
+        document.body.classList.add('is-scrolling');
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            document.body.classList.remove('is-scrolling');
+        }, 150);
+    }, { passive: true });
+}
+
+// フォントサイズの動的調整（ユーザー設定に応じて）
+function adjustFontSizeForAccessibility() {
+    // ブラウザのフォントサイズ設定を検知
+    const baseFontSize = parseFloat(
+        window.getComputedStyle(document.documentElement).fontSize
+    );
+    
+    if (baseFontSize > 16) {
+        // ユーザーが大きいフォントを設定している場合
+        document.body.classList.add('large-text-mode');
+    }
+}
+
+// 画面向きの変更を検知
+function handleOrientationChange() {
+    window.addEventListener('orientationchange', () => {
+        // 向きが変わった後、レイアウトを再調整
+        setTimeout(() => {
+            // スクロール位置を維持
+            window.scrollTo(0, window.scrollY);
+            
+            // 高さの再計算（iOS Safariのアドレスバー問題対策）
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }, 100);
+    });
+    
+    // 初回実行
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// リサイズ時の最適化
+window.addEventListener('resize', () => {
+    // ビューポートの高さを更新（iOS対策）
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
