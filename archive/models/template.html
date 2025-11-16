@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[機種名] - [メーカー名]の詳細情報、取扱説明書、修理ガイド、パーツ互換情報">
+    <meta name="keywords" content="[機種名],[メーカー名],ラジコン,RC,修理,取扱説明書,パーツ">
+    <title>[機種名] - [メーカー名] | RCアーカイブ</title>
+    <link rel="stylesheet" href="../archive.css">
+    <style>
+        /* 言語切り替えボタン */
+        .language-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--archive-primary);
+            border-color: white;
+        }
+
+        /* パンくずナビ */
+        .breadcrumb {
+            margin-top: 20px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        /* 機種詳細ページ専用スタイル */
+        .model-header {
+            background: linear-gradient(135deg, var(--archive-primary) 0%, var(--archive-secondary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .model-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .model-meta {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .model-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .info-table {
+            width: 100%;
+            background: var(--archive-card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .info-table tr {
+            border-bottom: 1px solid var(--archive-border);
+        }
+        
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .info-table td {
+            padding: 15px 20px;
+        }
+        
+        .info-table td:first-child {
+            background: var(--archive-bg);
+            font-weight: 600;
+            color: var(--archive-primary);
+            width: 180px;
+        }
+        
+        .section {
+            background: var(--archive-card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            color: var(--archive-primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--archive-accent);
+        }
+        
+        .section h3 {
+            color: var(--archive-secondary);
+            font-size: 1.3rem;
+            margin: 20px 0 15px;
+        }
+        
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .section ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--archive-border);
+        }
+        
+        .section ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .section a {
+            color: var(--archive-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .section a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .status-current {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-discontinued {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-rare {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        @media (max-width: 768px) {
+            .model-title {
+                font-size: 2rem;
+            }
+            
+            .info-table td:first-child {
+                width: 120px;
+                font-size: 0.9rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="model-header">
+        <div class="container">
+            <h1 class="model-title">[機種名]</h1>
+            <p class="model-meta">
+                [メーカー名] | [カテゴリー] | [発売年]年発売
+                <span class="status-badge status-current">[生産状況]</span>
+            </p>
+            
+            <!-- 言語切り替えボタン -->
+            <div class="language-switcher" style="margin-top: 20px;">
+                <button onclick="setLanguage('ja')" class="lang-btn active" id="lang-ja">日本語</button>
+                <button onclick="setLanguage('en')" class="lang-btn" id="lang-en">English</button>
+                <button onclick="setLanguage('zh')" class="lang-btn" id="lang-zh">中文</button>
+            </div>
+            
+            <!-- パンくずナビ -->
+            <nav class="breadcrumb" style="margin-top: 20px;">
+                <a href="../../index.html">メインサイト</a> > 
+                <a href="../index.html">アーカイブ</a> > 
+                <a href="../manufacturer/[メーカー英語名].html">[メーカー名]</a> > 
+                [機種名]
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="model-content">
+        
+        <!-- 基本情報 -->
+        <section class="section">
+            <h2>📋 基本情報</h2>
+            <table class="info-table">
+                <tr>
+                    <td>メーカー</td>
+                    <td>[メーカー名（日本語）] / [Manufacturer Name]</td>
+                </tr>
+                <tr>
+                    <td>機種名</td>
+                    <td>[機種名（日本語）] / [Model Name]</td>
+                </tr>
+                <tr>
+                    <td>型番</td>
+                    <td>[型番]</td>
+                </tr>
+                <tr>
+                    <td>発売年</td>
+                    <td>[発売年]年[発売月]月</td>
+                </tr>
+                <tr>
+                    <td>生産状況</td>
+                    <td>[現行販売中 / 生産終了 / 入手困難]</td>
+                </tr>
+                <tr>
+                    <td>カテゴリー</td>
+                    <td>[ラジコンカー / ラジコンヘリ / ラジコン飛行機]</td>
+                </tr>
+                <tr>
+                    <td>サブカテゴリー</td>
+                    <td>[詳細分類]</td>
+                </tr>
+                <tr>
+                    <td>駆動方式 / タイプ</td>
+                    <td>[駆動方式または機体タイプ]</td>
+                </tr>
+                <tr>
+                    <td>全長</td>
+                    <td>[数値] mm</td>
+                </tr>
+                <tr>
+                    <td>全幅</td>
+                    <td>[数値] mm</td>
+                </tr>
+                <tr>
+                    <td>全高</td>
+                    <td>[数値] mm</td>
+                </tr>
+                <tr>
+                    <td>重量</td>
+                    <td>[数値] g</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 画像ギャラリー -->
+        <section class="section">
+            <h2>📸 画像</h2>
+            <div class="image-gallery">
+                <!-- 画像がある場合のみ表示 -->
+                <img src="../assets/images/[メーカー]/[機種名]-main.jpg" alt="[機種名] メイン画像">
+                <!-- サブ画像がある場合 -->
+                <!-- <img src="../assets/images/[メーカー]/[機種名]-sub1.jpg" alt="[機種名] サブ画像1"> -->
+                <!-- <img src="../assets/images/[メーカー]/[機種名]-sub2.jpg" alt="[機種名] サブ画像2"> -->
+            </div>
+            <p style="color: var(--archive-text-light); font-size: 0.9rem; margin-top: 15px;">
+                ※ 画像は参考です。実際の商品と異なる場合があります。
+            </p>
+        </section>
+
+        <!-- 取扱説明書・公式情報 -->
+        <section class="section">
+            <h2>📄 取扱説明書・公式情報</h2>
+            
+            <!-- 公式リンクがある場合 -->
+            <h3>公式リンク</h3>
+            <ul>
+                <li>🔗 <a href="[公式URL]" target="_blank" rel="noopener">メーカー公式ページ</a></li>
+                <li>📄 <a href="[公式PDF_組立]" target="_blank" rel="noopener">組立説明書（公式PDF）</a></li>
+                <li>📄 <a href="[公式PDF_パーツ]" target="_blank" rel="noopener">パーツリスト（公式PDF）</a></li>
+            </ul>
+            
+            <!-- URL未入力の場合の表示例 -->
+            <!-- <p>現在、公式リンクは登録されていません。</p> -->
+            
+            <div class="warning">
+                ⚠️ <strong>著作権について</strong><br>
+                取扱説明書やパーツリストの著作権は各メーカーに帰属します。<br>
+                このアーカイブでは公式リンクのみを掲載しています。
+            </div>
+        </section>
+
+        <!-- 修理ガイド -->
+        <section class="section">
+            <h2>🔧 修理ガイド</h2>
+            
+            <h3>よくある故障と対処法</h3>
+            <ul>
+                <li><strong>[故障内容1]</strong> → [対処法の概要] <a href="#">詳細はこちら</a></li>
+                <li><strong>[故障内容2]</strong> → [対処法の概要] <a href="#">詳細はこちら</a></li>
+                <li><strong>[故障内容3]</strong> → [対処法の概要] <a href="#">詳細はこちら</a></li>
+            </ul>
+            
+            <h3>ぽすとそに工房での修理実績</h3>
+            <table class="info-table" style="margin-top: 15px;">
+                <tr>
+                    <td>修理件数</td>
+                    <td>[件数]件</td>
+                </tr>
+                <tr>
+                    <td>修理難易度</td>
+                    <td>★★☆☆☆ （[1-5]）</td>
+                </tr>
+                <tr>
+                    <td>平均修理時間</td>
+                    <td>約[時間]時間</td>
+                </tr>
+            </table>
+            
+            <!-- 修理実績がない場合 -->
+            <!-- <p>現在、この機種の修理実績はありません。</p> -->
+        </section>
+
+        <!-- 互換パーツ情報 -->
+        <section class="section">
+            <h2>🔄 互換パーツ情報</h2>
+            <table class="info-table">
+                <thead>
+                    <tr style="background: var(--archive-bg);">
+                        <td style="font-weight: 700;">純正パーツ</td>
+                        <td style="font-weight: 700;">互換パーツ</td>
+                        <td style="font-weight: 700;">備考</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[パーツ名1]</td>
+                        <td>[互換パーツ情報]</td>
+                        <td>[完全互換 / 一部互換 / 要加工]</td>
+                    </tr>
+                    <tr>
+                        <td>[パーツ名2]</td>
+                        <td>[互換パーツ情報]</td>
+                        <td>[備考]</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- 互換パーツ情報がない場合 -->
+            <!-- <p>現在、互換パーツ情報は登録されていません。</p> -->
+        </section>
+
+        <!-- 参考リンク -->
+        <section class="section">
+            <h2>🔗 参考リンク</h2>
+            <ul>
+                <!-- noteリンクがある場合 -->
+                <li>📝 <a href="[note記事URL]" target="_blank" rel="noopener">note記事：[タイトル]</a></li>
+                <!-- YouTubeリンクがある場合 -->
+                <li>🎥 <a href="[YouTube動画URL]" target="_blank" rel="noopener">YouTube動画：[タイトル]</a></li>
+                <!-- その他 -->
+                <li>🔗 <a href="[その他URL]" target="_blank" rel="noopener">[その他参考情報]</a></li>
+            </ul>
+            
+            <!-- リンクがない場合 -->
+            <!-- <p>現在、参考リンクは登録されていません。</p> -->
+        </section>
+
+        <!-- 更新履歴 -->
+        <section class="section">
+            <h2>📅 更新履歴</h2>
+            <ul>
+                <li><strong>2025/11/16</strong> - ページ作成</li>
+                <li><strong>[日付]</strong> - [更新内容]</li>
+            </ul>
+        </section>
+
+        <!-- 備考 -->
+        <section class="section">
+            <h2>💡 備考</h2>
+            <p>[自由記述欄 - 特記事項、初心者向けコメント、入手方法など]</p>
+            
+            <!-- 備考がない場合 -->
+            <!-- <p>特記事項はありません。</p> -->
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="archive-footer">
+        <div class="container">
+            <p>&copy; 2025 ぽすとそに工房 RC Archive. All rights reserved.</p>
+            <p>
+                このページの情報は[最終更新日]時点のものです。<br>
+                著作権は各メーカーに帰属します。
+            </p>
+        </div>
+    </footer>
+
+    <script src="../archive.js"></script>
+</body>
+</html>

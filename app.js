@@ -377,6 +377,22 @@ const translations = {
             step5Item3: 'これでRCについての初期段階は終了です！マイペースに遊ぶもよし、たくさん練習するもよし、いざRCの世界へ！',
             note: '※目安のSTEPです。それぞれの遊び方のニーズに合わせてどこまでも真摯に向き合います。いつでもお問い合わせフォームからご連絡ください。'
         },
+        archive: {
+            main: {
+                title: '📚 RCアーカイブ',
+                subtitle: '絶版から現代までのラジコン機種を網羅したデータベース\nRC文化の歴史を次の世代へ継承するタイムカプセル',
+                purpose: {
+                    title: '🎯 アーカイブの目的',
+                    item1: '✅ 絶版機種の情報保存 - 取扱説明書や修理ガイドを永続的に記録',
+                    item2: '✅ 技術継承 - 18年間の修理経験と100件以上の実績をデータ化',
+                    item3: '✅ 情報更新 - データ不備があれば随時訂正・更新',
+                    item4: '✅ コミュニティ協力 - 機種情報をお持ちの方からの情報提供を歓迎'
+                },
+                current: '現在、3機種のデータを公開中（タミヤ TT-02、京商 カルマートアルファ40、JR PROPO Forza450）\n今後、ラジコンカーを中心に情報を拡充していきます！',
+                button: '📚 RCアーカイブを見る →',
+                request: '💡 情報提供のお願い\nお持ちの機種情報や取扱説明書がございましたら、ぜひご協力ください！\n一緒にRC文化を未来へ残しましょう。'
+            }
+        },
         profileSection: {
             title: 'プロフィール',
             nameLabel: '名前',
@@ -760,6 +776,22 @@ const translations = {
             step5Item3: 'This completes the initial stage! Enjoy at your own pace or practice extensively - welcome to the RC world!',
             note: '※This is a guideline. We sincerely work with you according to your play style needs. Please contact us anytime through the contact form.'
         },
+        archive: {
+            main: {
+                title: '📚 RC Archive',
+                subtitle: 'A comprehensive database of RC models from discontinued to modern\nA time capsule preserving RC culture for the next generation',
+                purpose: {
+                    title: '🎯 Archive Purpose',
+                    item1: '✅ Preservation of Discontinued Model Information - Permanently recording instruction manuals and repair guides',
+                    item2: '✅ Technology Succession - Converting 18 years of repair experience and 100+ cases into data',
+                    item3: '✅ Information Updates - Prompt corrections and updates for any data discrepancies',
+                    item4: '✅ Community Collaboration - Welcoming information contributions from those with model knowledge'
+                },
+                current: 'Currently publishing data for 3 models (Tamiya TT-02, Kyosho Calmato Alpha 40, JR PROPO Forza450)\nWe will expand information focusing on RC cars in the future!',
+                button: '📚 View RC Archive →',
+                request: '💡 Request for Information\nIf you have model information or instruction manuals, we would appreciate your cooperation!\nLet\'s preserve RC culture for the future together.'
+            }
+        },
         profileSection: {
             title: 'Profile',
             nameLabel: 'Name',
@@ -1142,6 +1174,22 @@ const translations = {
             step5Item2: '如果在附近，遇到困难时请随时联系。即使在远方，我们也会尽快回应。',
             step5Item3: 'RC的初期阶段到此结束！可以按自己的节奏玩，也可以大量练习，欢迎进入RC世界！',
             note: '※这是一个指南。我们会根据每个人的游玩方式需求真诚地应对。请随时通过联系表单与我们联系。'
+        },
+        archive: {
+            main: {
+                title: '📚 RC资料库',
+                subtitle: '从绝版到现代的全面遥控车模型数据库\n将RC文化历史传承给下一代的时间胶囊',
+                purpose: {
+                    title: '🎯 资料库目的',
+                    item1: '✅ 保存绝版机型信息 - 永久记录使用说明书和维修指南',
+                    item2: '✅ 技术传承 - 将18年的维修经验和100+实例数据化',
+                    item3: '✅ 信息更新 - 如有数据不足，及时订正和更新',
+                    item4: '✅ 社区合作 - 欢迎拥有机型信息的人士提供信息'
+                },
+                current: '目前已公开3个机型的数据（Tamiya TT-02、京商 Calmato Alpha 40、JR PROPO Forza450）\n今后将以遥控车为中心扩充信息！',
+                button: '📚 查看RC资料库 →',
+                request: '💡 信息提供请求\n如果您有机型信息或使用说明书，请务必与我们合作！\n让我们一起将RC文化留给未来。'
+            }
         },
         profileSection: {
             title: '简介',

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タミヤ TT-02 | RCアーカイブ</title>
+    <meta name="description" content="タミヤ TT-02の詳細情報、スペック、修理ガイド - ぽすとそに工房 RCアーカイブ">
+    <link rel="stylesheet" href="../archive.css">
+    <style>
+        /* ページ固有のスタイル */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .spec-table th,
+        .spec-table td {
+            padding: 12px;
+            border: 1px solid var(--archive-border);
+            text-align: left;
+        }
+        .spec-table th {
+            background-color: var(--archive-primary);
+            color: white;
+            font-weight: 600;
+        }
+        .spec-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--archive-border);
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: var(--archive-accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .difficulty-stars {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="archive-header">
+        <div class="container">
+            <h1>タミヤ TT-02</h1>
+            <p class="subtitle">タミヤ | ラジコンカー | 2013年5月発売 | 現行販売中</p>
+            
+            <!-- 言語切り替えボタン -->
+            <div class="language-switcher">
+                <button onclick="setLanguage('ja')" class="lang-btn active" id="lang-ja">日本語</button>
+                <button onclick="setLanguage('en')" class="lang-btn" id="lang-en">English</button>
+                <button onclick="setLanguage('zh')" class="lang-btn" id="lang-zh">中文</button>
+            </div>
+            
+            <!-- パンくずナビ -->
+            <nav class="breadcrumb">
+                <a href="../index.html">アーカイブトップ</a> &gt; 
+                <a href="../database.html">機種データベース</a> &gt; 
+                TT-02
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container">
+        <!-- メイン画像 -->
+        <section class="content-section" style="text-align: center; margin: 30px 0;">
+            <img src="../assets/images/tamiya/tt02-main.png" alt="タミヤ TT-02" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">引用元画像：タミヤ公式サイト</p>
+        </section>
+        
+        <!-- 基本情報 -->
+        <section id="basic-info" class="content-section">
+            <h2>📋 基本情報</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>メーカー</th>
+                    <td>タミヤ（Tamiya）</td>
+                </tr>
+                <tr>
+                    <th>機種名</th>
+                    <td>TT-02</td>
+                </tr>
+                <tr>
+                    <th>型番</th>
+                    <td>58000（シャーシキット）</td>
+                </tr>
+                <tr>
+                    <th>発売時期</th>
+                    <td>2013年5月</td>
+                </tr>
+                <tr>
+                    <th>生産状況</th>
+                    <td><span style="color: #28a745; font-weight: bold;">現行販売中</span></td>
+                </tr>
+                <tr>
+                    <th>カテゴリー</th>
+                    <td>ラジコンカー（1/10スケール 電動RCカー）</td>
+                </tr>
+                <tr>
+                    <th>サブカテゴリー</th>
+                    <td>ツーリングカー（初心者向けエントリーモデル）</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- シャーシスペック -->
+        <section id="chassis-spec" class="content-section">
+            <h2>📏 シャーシスペック</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>シャーシ長</th>
+                    <td>385mm</td>
+                </tr>
+                <tr>
+                    <th>シャーシ幅</th>
+                    <td>187mm</td>
+                </tr>
+                <tr>
+                    <th>ホイールベース</th>
+                    <td>257mm（スタンダード）/ 251mm（ショート）</td>
+                </tr>
+                <tr>
+                    <th>タイヤ幅/径</th>
+                    <td>前後とも 24mm/64mm</td>
+                </tr>
+                <tr>
+                    <th>フレーム</th>
+                    <td>船底形状バスタブタイプ</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 駆動系 -->
+        <section id="drivetrain" class="content-section">
+            <h2>⚙️ 駆動系</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>駆動方式</th>
+                    <td>縦置きモーター・シャフトドライブ4WD</td>
+                </tr>
+                <tr>
+                    <th>デフギヤ</th>
+                    <td>前後とも樹脂製4ベベルタイプ</td>
+                </tr>
+                <tr>
+                    <th>ギヤ比</th>
+                    <td>標準 8.27:1（オンロード）/ 10.71:1（オフロード）<br>
+                    ピニオンギヤ交換で 11.38:1〜7.28:1 まで10種類選択可能</td>
+                </tr>
+                <tr>
+                    <th>モーター</th>
+                    <td><strong>540タイプ推奨</strong><br>
+                    380タイプも搭載可能だが、540タイプが最適</td>
+                </tr>
+            </table>
+            
+            <div class="warning-box">
+                <h3>⚠️ ブラシレスモーター搭載時の注意</h3>
+                <p>ブラシレスモーター搭載時は一部パーツ（モーター周辺）を取り外す必要があります。これは仕様であり、問題なく搭載可能です。</p>
+            </div>
+        </section>
+
+        <!-- サスペンション -->
+        <section id="suspension" class="content-section">
+            <h2>🔧 サスペンション</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>形式</th>
+                    <td>4輪ダブルウィッシュボーン</td>
+                </tr>
+                <tr>
+                    <th>ステアリング</th>
+                    <td>3分割タイロッド式</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 特徴 -->
+        <section id="features" class="content-section">
+            <h2>💡 特徴</h2>
+            <h3>初心者から上級者まで楽しめる万能シャーシ</h3>
+            <ul class="feature-list">
+                <li>初心者向け設計（部品点数少なめ、組み立てやすい）</li>
+                <li>豊富なオプションパーツで上級者も楽しめる</li>
+                <li>初心者との走行会でも相性抜群</li>
+                <li>パーツ組換えでホイールベース・車高・トレッド調整可能</li>
+                <li>セッティング次第でオンロードからフラットダートまで対応</li>
+                <li>汎用性が高く、多彩なボディ装着可能</li>
+                <li>タミヤグランプリ、チャレンジカップ参戦に最適</li>
+            </ul>
+        </section>
+
+        <!-- 修理ガイド -->
+        <section id="repair-guide" class="content-section">
+            <h2>🔧 ぽすとそに工房での修理実績</h2>
+            
+            <h3>修理難易度</h3>
+            <p class="difficulty-stars">★☆☆☆☆</p>
+            <p><strong>非常に簡単、初心者でも修理可能</strong></p>
+            
+            <h3>よくある故障・注意点</h3>
+            <table class="spec-table">
+                <tr>
+                    <th>故障内容</th>
+                    <th>対処方法</th>
+                </tr>
+                <tr>
+                    <td>ギアボックスの異音</td>
+                    <td>ギア噛み合わせ調整、グリスアップ</td>
+                </tr>
+                <tr>
+                    <td>ダート路面でのプロペラシャフト損傷大</td>
+                    <td>オプションパーツですぐ解決</td>
+                </tr>
+                <tr>
+                    <td>ホイールアクスルが抜けやすい</td>
+                    <td>オプションパーツですぐ解決</td>
+                </tr>
+                <tr>
+                    <td>モーターに熱を持ちやすい</td>
+                    <td>ヒートシンク追加、適切なギヤ比選択</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 参考リンク -->
+        <section id="links" class="content-section">
+            <h2>🔗 参考リンク</h2>
+            <ul>
+                <li><a href="https://www.tamiya.com/japan/products/58000/index.html" target="_blank" rel="noopener">タミヤ公式ページ</a></li>
+                <li><a href="../index.html">RCアーカイブトップに戻る</a></li>
+                <li><a href="../database.html">機種データベース一覧に戻る</a></li>
+            </ul>
+        </section>
+
+        <!-- 更新履歴 -->
+        <section id="update-history" class="content-section">
+            <h2>📅 更新履歴</h2>
+            <ul>
+                <li>2025/11/16: ページ作成（データ入力：ぽすとそに）</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="archive-footer">
+        <div class="container">
+            <p style="font-size: 1.2em; font-weight: bold; color: #ffffff; margin-bottom: 20px;">&copy; 2025 ぽすとそに工房 RCアーカイブ</p>
+            <p style="margin: 20px 0;">
+                <a href="../index.html" style="display: inline-block; padding: 15px 40px; margin: 10px; background-color: #3498db; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#2980b9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)';" onmouseout="this.style.backgroundColor='#3498db'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    ← アーカイブトップに戻る
+                </a>
+                <a href="../database.html" style="display: inline-block; padding: 15px 40px; margin: 10px; background-color: #27ae60; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#229954'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)';" onmouseout="this.style.backgroundColor='#27ae60'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    📋 機種データベース一覧
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../archive.js"></script>
+</body>
+</html>

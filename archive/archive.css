@@ -1,0 +1,422 @@
+/* ========================================
+   RCアーカイブ専用スタイルシート
+   落ち着いた配色・読みやすさ重視
+======================================== */
+
+/* カラーパレット */
+:root {
+    /* メインカラー */
+    --archive-primary: #2c3e50;
+    --archive-secondary: #34495e;
+    --archive-accent: #3498db;
+    
+    /* 背景色 */
+    --archive-bg: #f8f9fa;
+    --archive-card-bg: #ffffff;
+    
+    /* テキスト */
+    --archive-text: #2c3e50;
+    --archive-text-light: #7f8c8d;
+    
+    /* ボーダー */
+    --archive-border: #dfe6e9;
+    
+    /* ホバー */
+    --archive-hover: #e8f4f8;
+}
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-color: var(--archive-bg);
+    color: var(--archive-text);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+.archive-header {
+    background: linear-gradient(135deg, var(--archive-primary) 0%, var(--archive-secondary) 100%);
+    color: white;
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+
+.archive-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.archive-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* 言語切り替えボタン */
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    background: white;
+    color: var(--archive-primary);
+    border-color: white;
+}
+
+/* パンくずナビ */
+.breadcrumb {
+    margin-top: 20px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ========================================
+   メインコンテンツ
+======================================== */
+.archive-main {
+    padding: 40px 20px;
+}
+
+/* 統計情報 */
+.archive-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    background: var(--archive-card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--archive-accent);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--archive-text-light);
+}
+
+/* セクション */
+.browse-section,
+.search-section,
+.about-section {
+    margin-bottom: 60px;
+}
+
+.browse-section h2,
+.search-section h2,
+.about-section h2 {
+    font-size: 2rem;
+    color: var(--archive-primary);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--archive-accent);
+}
+
+/* 検索ボックス */
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid var(--archive-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--archive-accent);
+}
+
+.search-box button {
+    background: var(--archive-accent);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* カードグリッド */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-grid-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.browse-card,
+.browse-card-large {
+    background: var(--archive-card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--archive-text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.browse-card:hover,
+.browse-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-color: var(--archive-accent);
+    background: var(--archive-hover);
+}
+
+.browse-card h3,
+.browse-card-large h3 {
+    font-size: 1.5rem;
+    color: var(--archive-primary);
+    margin-bottom: 10px;
+}
+
+.browse-card p,
+.browse-card-large p {
+    color: var(--archive-text-light);
+    font-size: 0.95rem;
+}
+
+.browse-card-large h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.browse-card-large p {
+    font-size: 1rem;
+}
+
+/* 年代グリッド */
+.era-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.era-card {
+    background: var(--archive-card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--archive-text);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.era-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-color: var(--archive-accent);
+    background: var(--archive-hover);
+}
+
+.era-card h3 {
+    font-size: 1.2rem;
+    color: var(--archive-primary);
+    margin-bottom: 5px;
+}
+
+.era-card p {
+    color: var(--archive-text-light);
+    font-size: 0.85rem;
+}
+
+/* アーカイブについて */
+.about-content {
+    background: var(--archive-card-bg);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    line-height: 2;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   フッター
+======================================== */
+.archive-footer {
+    background: var(--archive-primary);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.archive-footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.archive-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   レスポンシブデザイン
+======================================== */
+@media (max-width: 768px) {
+    .archive-title {
+        font-size: 2rem;
+    }
+    
+    .archive-subtitle {
+        font-size: 1rem;
+    }
+    
+    .language-switcher {
+        flex-wrap: wrap;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .card-grid,
+    .card-grid-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .era-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .archive-header {
+        padding: 40px 20px 30px;
+    }
+    
+    .archive-title {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .browse-section h2,
+    .search-section h2,
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+   印刷用スタイル
+======================================== */
+@media print {
+    .language-switcher,
+    .breadcrumb {
+        display: none;
+    }
+    
+    .archive-header {
+        background: white;
+        color: black;
+        padding: 20px;
+    }
+    
+    .browse-card,
+    .browse-card-large,
+    .era-card,
+    .stat-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}

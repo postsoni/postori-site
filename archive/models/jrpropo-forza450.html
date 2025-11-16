@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR PROPO Forza450 | RCアーカイブ</title>
+    <meta name="description" content="JR PROPO Forza450の詳細情報、スペック、修理ガイド - ぽすとそに工房 RCアーカイブ">
+    <link rel="stylesheet" href="../archive.css">
+    <style>
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .spec-table th,
+        .spec-table td {
+            padding: 12px;
+            border: 1px solid var(--archive-border);
+            text-align: left;
+        }
+        .spec-table th {
+            background-color: var(--archive-primary);
+            color: white;
+            font-weight: 600;
+        }
+        .spec-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--archive-border);
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: var(--archive-accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .difficulty-stars {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+        
+        .battery-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .battery-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .battery-option {
+            border: 2px solid var(--archive-border);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .battery-option h4 {
+            color: var(--archive-primary);
+            margin-top: 0;
+        }
+        
+        .kit-contents {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="archive-header">
+        <div class="container">
+            <h1>JR PROPO Forza450</h1>
+            <p class="subtitle">JR PROPO | ラジコンヘリコプター（電動ヘリ） | 2013年5月発売 | 生産終了</p>
+            
+            <!-- 言語切り替えボタン -->
+            <div class="language-switcher">
+                <button onclick="setLanguage('ja')" class="lang-btn active" id="lang-ja">日本語</button>
+                <button onclick="setLanguage('en')" class="lang-btn" id="lang-en">English</button>
+                <button onclick="setLanguage('zh')" class="lang-btn" id="lang-zh">中文</button>
+            </div>
+            
+            <!-- パンくずナビ -->
+            <nav class="breadcrumb">
+                <a href="../index.html">アーカイブトップ</a> &gt; 
+                <a href="../database.html">機種データベース</a> &gt; 
+                Forza450
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container">
+        <!-- メイン画像 -->
+        <section class="content-section" style="text-align: center; margin: 30px 0;">
+            <img src="../assets/images/jrpropo/forza450-main.png" alt="JR PROPO Forza450" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">引用元画像：JR PROPO公式サイト</p>
+        </section>
+        
+        <!-- 基本情報 -->
+        <section id="basic-info" class="content-section">
+            <h2>📋 基本情報</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>メーカー</th>
+                    <td>JR PROPO（日本遠隔制御）</td>
+                </tr>
+                <tr>
+                    <th>機種名</th>
+                    <td>Forza450</td>
+                </tr>
+                <tr>
+                    <th>発売時期</th>
+                    <td>2013年5月</td>
+                </tr>
+                <tr>
+                    <th>生産状況</th>
+                    <td><span style="color: #dc3545; font-weight: bold;">生産終了</span></td>
+                </tr>
+                <tr>
+                    <th>カテゴリー</th>
+                    <td>ラジコンヘリコプター</td>
+                </tr>
+                <tr>
+                    <th>サブカテゴリー</th>
+                    <td>電動ヘリ</td>
+                </tr>
+                <tr>
+                    <th>ヘリ分類</th>
+                    <td>電動ヘリ</td>
+                </tr>
+                <tr>
+                    <th>クラス</th>
+                    <td>450クラス</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 機体スペック -->
+        <section id="heli-spec" class="content-section">
+            <h2>📏 機体スペック</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>メインローター径</th>
+                    <td>325mm（カーボンメインローター）</td>
+                </tr>
+                <tr>
+                    <th>推奨バッテリー</th>
+                    <td>Li-Po 3セル（標準）～ 6セル（ハード3Dフライト用）</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- パワーユニット -->
+        <section id="powerunit" class="content-section">
+            <h2>⚙️ パワーユニット</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>標準モーター</th>
+                    <td>NHM-30-8P 3500KV（3セル用）</td>
+                </tr>
+                <tr>
+                    <th>オプションモーター</th>
+                    <td>NHM-30-8P EX（6セル用、別売）</td>
+                </tr>
+                <tr>
+                    <th>ESC</th>
+                    <td>NHA-50-SB5 50A/BEC5A（別売）</td>
+                </tr>
+            </table>
+            
+            <h3>バッテリー選択ガイド</h3>
+            <div class="battery-comparison">
+                <div class="battery-option">
+                    <h4>⚡ 3セル仕様（推奨）</h4>
+                    <ul>
+                        <li><strong>特徴：</strong>軽く仕上がり機敏</li>
+                        <li><strong>フライト性能：</strong>ピルエットフリップなども問題なく可能</li>
+                        <li><strong>メリット：</strong>軽量で取り回しが良い</li>
+                        <li><strong>向いている人：</strong>標準的なフライトを楽しみたい方</li>
+                    </ul>
+                </div>
+                
+                <div class="battery-option">
+                    <h4>🔋 6セル仕様（上級者向け）</h4>
+                    <ul>
+                        <li><strong>特徴：</strong>パワーに余力がある</li>
+                        <li><strong>フライト性能：</strong>飛行時間が長くなる</li>
+                        <li><strong>注意：</strong>アンプのスペック不足で焼けることも</li>
+                        <li><strong>向いている人：</strong>長時間フライトを楽しみたい方</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ 6セル使用時の注意</h4>
+                <p>無理なハードフライトで6セルを選ぶとアンプが焼けることがあります（アンプのスペック不足）。6セル変更時は別売の6セル用モーターNHM-30-8P EXと、適切なスペックのESCが必要です。</p>
+            </div>
+        </section>
+
+        <!-- キット内容 -->
+        <section id="kit-contents" class="content-section">
+            <h2>📦 キット内容</h2>
+            <div class="kit-contents">
+                <ul>
+                    <li>フロントFRPボディ450R（標準）※色の選択可</li>
+                    <li>カーボンメインローター325</li>
+                    <li>XT60コネクターFMセット（ブラック）</li>
+                    <li>メタルサーボホーン（L14 3個 / L10 1個）</li>
+                </ul>
+                <p><strong>※メカ、モーター、ESCは付属なし</strong></p>
+            </div>
+        </section>
+
+        <!-- 特徴 -->
+        <section id="features" class="content-section">
+            <h2>💡 特徴</h2>
+            
+            <h3>汎用性の高い450クラスヘリ</h3>
+            <ul class="feature-list">
+                <li>汎用性の高いリポ3セルバッテリーでフライト可能</li>
+                <li>マイクロヘリからのステップアップに最適</li>
+                <li>上級者にも親しまれる機体</li>
+            </ul>
+            
+            <h3>軽量かつ高剛性設計</h3>
+            <ul class="feature-list">
+                <li>軽量で高い剛性を誇る</li>
+                <li>メンテナンスが容易</li>
+            </ul>
+            
+            <h3>拡張性</h3>
+            <ul class="feature-list">
+                <li>モーターを3セルから6セルに変更可能</li>
+                <li>3セル：軽く仕上がり機敏、ピルエットフリップなども問題なく可能</li>
+                <li>6セル：パワーに余力があり飛行時間が長くなる</li>
+            </ul>
+        </section>
+
+        <!-- 修理ガイド -->
+        <section id="repair-guide" class="content-section">
+            <h2>🔧 ぽすとそに工房での修理実績</h2>
+            
+            <h3>修理難易度</h3>
+            <p class="difficulty-stars">★★★★☆ / ★★☆☆☆</p>
+            <p><strong>標準的な技術者：★★★★☆（やや難しい）</strong></p>
+            <p><strong>ぽすとそに工房：★★☆☆☆（慣れているため容易）</strong></p>
+            
+            <h3>よくある故障・注意点</h3>
+            <table class="spec-table">
+                <tr>
+                    <th>故障内容</th>
+                    <th>原因・対処方法</th>
+                </tr>
+                <tr>
+                    <td>サーボホーンの破損</td>
+                    <td>マイクロサーボ使用のため、サーボホーンが弱いと折れることがある</td>
+                </tr>
+                <tr>
+                    <td>6セルでアンプが焼ける</td>
+                    <td>アンプのスペック不足。適切なスペックのESCを選定する</td>
+                </tr>
+                <tr>
+                    <td>キャノピーのズレによる墜落</td>
+                    <td>スワッシュのリンケージにぶつかっていることを知らずに墜落するケースあり</td>
+                </tr>
+            </table>
+            
+            <div class="warning-box">
+                <h4>⚠️ キャノピー取り扱いの注意</h4>
+                <p><strong>キャノピー取り付け用の下の爪が挟むだけの構造</strong></p>
+                <ul>
+                    <li>よくズレて挟み、スワッシュのリンケージにぶつかっていることを知らずに墜落するケースあり</li>
+                    <li>爪の形状でキャノピーが割れることがあるため、<strong>ゆっくり取り付け・取り外しを推奨</strong></li>
+                    <li>フライト前に必ずキャノピーの取り付け状態を確認すること</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>💡 バッテリー選択のアドバイス</h4>
+                <p><strong>3セルでもピルエットフリップなどは問題なくできます。</strong></p>
+                <p>6セルのメリットは主に飛行時間が長くなること（パワーに余力があるため）。3セルは軽く仕上がるので機敏です。</p>
+            </div>
+        </section>
+
+        <!-- 参考リンク -->
+        <section id="links" class="content-section">
+            <h2>🔗 参考リンク</h2>
+            <ul>
+                <li><a href="https://www.jrpropo-jp.com/product-page/forza450" target="_blank" rel="noopener">JR PROPO公式ページ</a></li>
+                <li><a href="https://rcdepot-jp.sakura.ne.jp/product/product-4509" target="_blank" rel="noopener">RC DEPOT 商品ページ</a></li>
+                <li><a href="../index.html">RCアーカイブトップに戻る</a></li>
+                <li><a href="../database.html">機種データベース一覧に戻る</a></li>
+            </ul>
+        </section>
+
+        <!-- 更新履歴 -->
+        <section id="update-history" class="content-section">
+            <h2>📅 更新履歴</h2>
+            <ul>
+                <li>2025/11/16: ページ作成（データ入力：ぽすとそに）</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="archive-footer">
+        <div class="container">
+            <p style="font-size: 1.2em; font-weight: bold; color: #ffffff; margin-bottom: 20px;">&copy; 2025 ぽすとそに工房 RCアーカイブ</p>
+            <p style="margin: 20px 0;">
+                <a href="../index.html" style="display: inline-block; padding: 15px 40px; margin: 10px; background-color: #3498db; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#2980b9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)';" onmouseout="this.style.backgroundColor='#3498db'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    ← アーカイブトップに戻る
+                </a>
+                <a href="../database.html" style="display: inline-block; padding: 15px 40px; margin: 10px; background-color: #27ae60; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#229954'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)';" onmouseout="this.style.backgroundColor='#27ae60'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    📋 機種データベース一覧
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../archive.js"></script>
+</body>
+</html>
