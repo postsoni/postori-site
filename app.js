@@ -592,7 +592,16 @@ const translations = {
             beginnerGuideButton: '初心者ガイドを見る →',
             ctaHighlightTitle: 'お気軽にご相談ください',
             ctaHighlightText: '修理のご依頼、技術的なご質問、初心者の方へのサポートなど、どんなことでもお問い合わせください。',
-            ctaContact: '📧 お問い合わせフォームへ'
+            ctaContact: '📧 お問い合わせフォームへ',
+            // スーパーリロード注意書き
+            reloadNoticeTitle: '💡 最新情報をご覧いただくために',
+            reloadNoticeText1: '当サイトは頻繁に更新されています。',
+            reloadNoticeText2: '最新の情報が表示されない場合がございますので、お手数ですが',
+            reloadNoticeText3: 'ブラウザのページ更新をお試しください。',
+            reloadWindows: '【Windows】',
+            reloadWindowsKeys: 'Ctrl + F5　または　Ctrl + Shift + R',
+            reloadMac: '【Mac】',
+            reloadMacKeys: 'Command（⌘）+ Shift + R'
         },
         websiteProject: {
             date: '2025年11月13日',
@@ -706,6 +715,36 @@ const translations = {
             techPerformance: 'パフォーマンス: Critical CSS、Service Worker（キャッシュ戦略）、画像遅延読み込み、リソースヒント',
             conclusionTitle: '💡 プロジェクトを通じて',
             conclusionText: 'このウェブサイト改善プロジェクトを通じて、「技術は人のためにある」という信念を改めて実感しました。視覚障害のある方、運動障害のある方、すべての人が平等に情報にアクセスできる環境を作ることの重要性を学びました。また、AI技術（Claude）を活用することで、個人でもこれだけのクオリティのウェブサイトを作成できることを証明できました。これは、RC文化の保存と発展、そしてデジタルデバイド解消への一歩だと考えています。今後も、ユーザーの皆様のフィードバックをもとに、継続的な改善を続けていきます。'
+        },
+        archiveProject: {
+            date: '2025年11月17日',
+            title: 'RCアーカイブプロジェクト始動 - 8機種のデータベース化完了',
+            overviewTitle: '📚 プロジェクト概要',
+            overviewText: 'ラジコン文化の保存と継承を目的とした「RCアーカイブプロジェクト」を開始しました。絶版機種から現代の最新機種まで、詳細な技術情報と修理ガイドをデータベース化し、後世に残す取り組みです。',
+            currentStatusTitle: '📊 現在の登録状況',
+            currentStatusItem1: '登録機種数: 8機種',
+            currentStatusItem2: '対応メーカー: タミヤ、京商、JR PROPO',
+            currentStatusItem3: 'カテゴリー: ラジコンカー（6機種）、ラジコン飛行機（1機種）、ラジコンヘリ（1機種）',
+            featuresTitle: '✨ 主な機能',
+            featuresItem1: '詳細な機種情報: スペック、発売年、生産状況など',
+            featuresItem2: '修理難易度表示: 初心者でも安心して選べる',
+            featuresItem3: '検索・フィルター機能: メーカー、カテゴリー、生産状況で絞り込み',
+            featuresItem4: '修理ガイド: よくある故障と対処法を掲載',
+            featuresItem5: '多言語対応: 日本語、英語、中国語（準備中）',
+            registeredModelsTitle: '🚗 登録済み機種',
+            rcCarCategory: '【ラジコンカー】',
+            rcCarItem1: 'タミヤ TT-02（ツーリングカー / 初心者～上級者向け）',
+            rcCarItem2: 'タミヤ TT-01（ツーリングカー / 高剛性設計）',
+            rcCarItem3: 'タミヤ TT-02B（バギー / オフロード仕様）',
+            rcCarItem4: 'タミヤ M-08 CONCEPT（Mシャーシ / リヤ駆動）',
+            rcCarItem5: 'タミヤ DF-03（4WDバギー / 中級者向け）',
+            rcCarItem6: 'タミヤ DT-03（2WDバギー / 初心者向け）',
+            rcPlaneCategory: '【ラジコン飛行機】',
+            rcPlaneItem1: '京商 カルマートアルファ40トレーナー（高翼トレーナー機）',
+            rcHeliCategory: '【ラジコンヘリ】',
+            rcHeliItem1: 'JR PROPO Forza450（450クラス電動ヘリ）',
+            futureTitle: '🚀 今後の展開',
+            futureText: '今後も継続的に機種を追加し、ヨコモ、ヒロボー、双葉電子工業などの製品も順次データベース化していきます。また、ユーザーの皆様からの情報提供も募集しています。一緒にRC文化を未来に残していきましょう。'
         }
     },
     en: {
@@ -991,7 +1030,16 @@ const translations = {
             beginnerGuideButton: 'View Beginner\'s Guide →',
             ctaHighlightTitle: 'Feel Free to Contact Us',
             ctaHighlightText: 'For repair requests, technical questions, beginner support, or any inquiries, please feel free to contact us.',
-            ctaContact: '📧 Contact for Consultation'
+            ctaContact: '📧 Contact for Consultation',
+            // Super Reload Notice
+            reloadNoticeTitle: '💡 For the Latest Information',
+            reloadNoticeText1: 'This site is frequently updated.',
+            reloadNoticeText2: 'If you don\'t see the latest information,',
+            reloadNoticeText3: 'please try refreshing your browser.',
+            reloadWindows: '【Windows】',
+            reloadWindowsKeys: 'Ctrl + F5 or Ctrl + Shift + R',
+            reloadMac: '【Mac】',
+            reloadMacKeys: 'Command (⌘) + Shift + R'
         },
         websiteProject: {
             date: 'November 13, 2025',
@@ -1105,6 +1153,36 @@ const translations = {
             techPerformance: 'Performance: Critical CSS, Service Worker (Cache Strategy), Image Lazy Loading, Resource Hints',
             conclusionTitle: '💡 Through This Project',
             conclusionText: 'Through this website improvement project, I have reaffirmed my belief that "technology is for people." I learned the importance of creating an environment where everyone, including those with visual or motor impairments, can access information equally. Also, by utilizing AI technology (Claude), I was able to prove that even an individual can create a website of this quality. This is a step toward preserving and developing RC culture and resolving the digital divide. We will continue to make continuous improvements based on feedback from our users.'
+        },
+        archiveProject: {
+            date: 'November 17, 2025',
+            title: 'RC Archive Project Launch - Database of 8 Models Completed',
+            overviewTitle: '📚 Project Overview',
+            overviewText: 'We have launched the "RC Archive Project" aimed at preserving and passing on RC culture. This initiative creates a database of detailed technical information and repair guides for models from discontinued classics to modern releases.',
+            currentStatusTitle: '📊 Current Status',
+            currentStatusItem1: 'Registered Models: 8 models',
+            currentStatusItem2: 'Supported Manufacturers: Tamiya, Kyosho, JR PROPO',
+            currentStatusItem3: 'Categories: RC Cars (6 models), RC Airplanes (1 model), RC Helicopters (1 model)',
+            featuresTitle: '✨ Main Features',
+            featuresItem1: 'Detailed Model Information: Specifications, release year, production status, etc.',
+            featuresItem2: 'Repair Difficulty Display: Easy selection even for beginners',
+            featuresItem3: 'Search & Filter Function: Filter by manufacturer, category, production status',
+            featuresItem4: 'Repair Guides: Common issues and solutions included',
+            featuresItem5: 'Multilingual Support: Japanese, English, Chinese (coming soon)',
+            registeredModelsTitle: '🚗 Registered Models',
+            rcCarCategory: '【RC Cars】',
+            rcCarItem1: 'Tamiya TT-02 (Touring Car / Beginner to Advanced)',
+            rcCarItem2: 'Tamiya TT-01 (Touring Car / High Rigidity Design)',
+            rcCarItem3: 'Tamiya TT-02B (Buggy / Off-road Specification)',
+            rcCarItem4: 'Tamiya M-08 CONCEPT (M-Chassis / Rear Wheel Drive)',
+            rcCarItem5: 'Tamiya DF-03 (4WD Buggy / Intermediate)',
+            rcCarItem6: 'Tamiya DT-03 (2WD Buggy / Beginner)',
+            rcPlaneCategory: '【RC Airplanes】',
+            rcPlaneItem1: 'Kyosho Calmato Alpha 40 Trainer (High-wing Trainer)',
+            rcHeliCategory: '【RC Helicopters】',
+            rcHeliItem1: 'JR PROPO Forza450 (450 Class Electric Heli)',
+            futureTitle: '🚀 Future Development',
+            futureText: 'We will continue to add models and gradually database products from Yokomo, Hirobo, Futaba Corporation, and others. We also welcome information contributions from users. Let\'s preserve RC culture for the future together.'
         }
     },
     zh: {
@@ -1390,7 +1468,16 @@ const translations = {
             beginnerGuideButton: '查看新手指南 →',
             ctaHighlightTitle: '欢迎随时咨询',
             ctaHighlightText: '维修委托、技术问题、新手支持等，任何问题都欢迎咨询。',
-            ctaContact: '📧 咨询联系表单'
+            ctaContact: '📧 咨询联系表单',
+            // 超级重新加载提示
+            reloadNoticeTitle: '💡 查看最新信息',
+            reloadNoticeText1: '本网站经常更新。',
+            reloadNoticeText2: '如果未显示最新信息，',
+            reloadNoticeText3: '请尝试刷新浏览器。',
+            reloadWindows: '【Windows】',
+            reloadWindowsKeys: 'Ctrl + F5 或 Ctrl + Shift + R',
+            reloadMac: '【Mac】',
+            reloadMacKeys: 'Command (⌘) + Shift + R'
         },
         websiteProject: {
             date: '2025年11月13日',
@@ -1504,6 +1591,36 @@ const translations = {
             techPerformance: '性能：Critical CSS、Service Worker（缓存策略）、图片延迟加载、资源提示',
             conclusionTitle: '💡 通过项目',
             conclusionText: '通过这个网站改善项目，我再次深刻认识到"技术是为人服务的"这一信念。我学到了为视觉障碍者、运动障碍者等所有人创造平等获取信息环境的重要性。此外，通过利用AI技术（Claude），我证明了即使是个人也能创建如此高质量的网站。这是朝着RC文化的保存与发展以及消除数字鸿沟迈出的一步。今后我们将根据用户的反馈持续改进。'
+        },
+        archiveProject: {
+            date: '2025年11月17日',
+            title: 'RC档案项目启动 - 完成8款机型数据库',
+            overviewTitle: '📚 项目概述',
+            overviewText: '我们启动了旨在保存和传承RC文化的"RC档案项目"。该项目将从绝版机型到现代最新机型的详细技术信息和维修指南数据库化，留给后代。',
+            currentStatusTitle: '📊 当前登记状况',
+            currentStatusItem1: '登记机型数：8款',
+            currentStatusItem2: '支持制造商：田宫、京商、JR PROPO',
+            currentStatusItem3: '类别：遥控车（6款）、遥控飞机（1款）、遥控直升机（1款）',
+            featuresTitle: '✨ 主要功能',
+            featuresItem1: '详细机型信息：规格、发售年份、生产状况等',
+            featuresItem2: '维修难度显示：初学者也能安心选择',
+            featuresItem3: '搜索和筛选功能：按制造商、类别、生产状况筛选',
+            featuresItem4: '维修指南：列出常见故障和解决方法',
+            featuresItem5: '多语言支持：日语、英语、中文（准备中）',
+            registeredModelsTitle: '🚗 已登记机型',
+            rcCarCategory: '【遥控车】',
+            rcCarItem1: '田宫 TT-02（房车 / 初学者~高级用户）',
+            rcCarItem2: '田宫 TT-01（房车 / 高刚性设计）',
+            rcCarItem3: '田宫 TT-02B（越野车 / 越野规格）',
+            rcCarItem4: '田宫 M-08 CONCEPT（M底盘 / 后驱）',
+            rcCarItem5: '田宫 DF-03（4WD越野车 / 中级）',
+            rcCarItem6: '田宫 DT-03（2WD越野车 / 初学者）',
+            rcPlaneCategory: '【遥控飞机】',
+            rcPlaneItem1: '京商 Calmato Alpha 40教练机（高翼教练机）',
+            rcHeliCategory: '【遥控直升机】',
+            rcHeliItem1: 'JR PROPO Forza450（450级电动直升机）',
+            futureTitle: '🚀 未来发展',
+            futureText: '今后我们将持续添加机型，并逐步对Yokomo、Hirobo、双叶电子工业等产品进行数据库化。我们也欢迎用户提供信息。让我们一起为未来保存RC文化。'
         }
     }
 };
@@ -2381,6 +2498,27 @@ function setLanguage(lang) {
     
     // 訪問者カウンターのテキストを更新
     updateVisitorCounterText(lang);
+    
+    // スーパーリロード注意書きの翻訳
+    const reloadNoticeTitle = document.querySelector('[data-translate="reloadNoticeTitle"]');
+    const reloadNoticeText1 = document.querySelector('[data-translate="reloadNoticeText1"]');
+    const reloadNoticeText2 = document.querySelector('[data-translate="reloadNoticeText2"]');
+    const reloadNoticeText3 = document.querySelector('[data-translate="reloadNoticeText3"]');
+    const reloadWindows = document.querySelector('[data-translate="reloadWindows"]');
+    const reloadWindowsKeys = document.querySelector('[data-translate="reloadWindowsKeys"]');
+    const reloadMac = document.querySelector('[data-translate="reloadMac"]');
+    const reloadMacKeys = document.querySelector('[data-translate="reloadMacKeys"]');
+    
+    if (trans.topSection) {
+        if (reloadNoticeTitle) reloadNoticeTitle.textContent = trans.topSection.reloadNoticeTitle;
+        if (reloadNoticeText1) reloadNoticeText1.textContent = trans.topSection.reloadNoticeText1;
+        if (reloadNoticeText2) reloadNoticeText2.textContent = trans.topSection.reloadNoticeText2;
+        if (reloadNoticeText3) reloadNoticeText3.textContent = trans.topSection.reloadNoticeText3;
+        if (reloadWindows) reloadWindows.textContent = trans.topSection.reloadWindows;
+        if (reloadWindowsKeys) reloadWindowsKeys.textContent = trans.topSection.reloadWindowsKeys;
+        if (reloadMac) reloadMac.textContent = trans.topSection.reloadMac;
+        if (reloadMacKeys) reloadMacKeys.textContent = trans.topSection.reloadMacKeys;
+    }
 }
 
 // 訪問者カウンターのテキストを言語に応じて更新
