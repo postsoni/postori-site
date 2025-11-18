@@ -4128,3 +4128,145 @@ body.dark-mode .coming-soon-text {
     padding-left: 20px;
     margin-top: 5px;
 }
+/* ==========================================================================
+   グッズセクション - PDFダウンロード
+   ========================================================================== */
+
+.goods-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.goods-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.goods-card-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.pdf-download-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.pdf-download-item:hover {
+    border-color: #ff7043;
+    box-shadow: 0 4px 12px rgba(255, 112, 67, 0.1);
+}
+
+.pdf-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.pdf-content {
+    flex: 1;
+}
+
+.pdf-content h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.pdf-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    color: #555;
+}
+
+.pdf-features li {
+    padding: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 112, 67, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 112, 67, 0.4);
+    background: linear-gradient(135deg, #ff5722 0%, #f4511e 100%);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.pdf-notice {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+.goods-coming-soon {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+}
+
+.coming-soon {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #6c757d;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.goods-notice {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .pdf-download-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .pdf-icon {
+        font-size: 2.5rem;
+    }
+    
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

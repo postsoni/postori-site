@@ -149,7 +149,7 @@
     </script>
     
     <!-- バージョン管理：サイト更新時は v=1.1.1, v=1.1.2 と変更してください -->
-    <link rel="stylesheet" href="style.css?v=1.1.0">
+    <link rel="stylesheet" href="style.css?v=1.2.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&family=Zen+Kurenaido&family=Shippori+Antique&display=swap" rel="stylesheet">
@@ -1132,12 +1132,35 @@
             <!-- グッズセクション -->
             <section id="goods" class="content-section tab-content">
                 <div class="section-header">
-                    <h2 class="section-title">🛍️ グッズ</h2>
+                    <h2 class="section-title" data-translate="goodsTitle">🛍️ グッズ</h2>
                 </div>
+                
+                <!-- PDFダウンロードセクション -->
                 <div class="goods-card">
-                    <p class="coming-soon">🚧 準備中です 🚧</p>
-                    <p>オリジナルグッズや情報が詰まったPDFファイルなどを今後展開予定です。</p>
-                    <p class="goods-notice">※このサイトでは商品の販売や注文受付は行っておりません。展開先は別の外部サービスを使います。</p>
+                    <h3 class="goods-card-title" data-translate="pdfDownloadTitle">📚 無料ダウンロード資料（日本語版）</h3>
+                    <p class="goods-card-description" data-translate="pdfDownloadDescription">初心者から中級者まで対応したRC用語集を無料でダウンロードできます！</p>
+                    
+                    <div class="pdf-download-item">
+                        <div class="pdf-icon">📖</div>
+                        <div class="pdf-content">
+                            <h4 data-translate="pdfGlossaryTitle">RC用語集（PDF）</h4>
+                            <ul class="pdf-features">
+                                <li data-translate="pdfFeature1">・基礎編① - 35個の基本用語</li>
+                                <li data-translate="pdfFeature2">・中級編② - 35個のセッティング用語</li>
+                                <li data-translate="pdfFeature3">・応用編③ - 55個の競技・専門用語</li>
+                            </ul>
+                            <a href="RC用語集_ぽすとそに工房.pdf" class="download-button" download="RC用語集_ぽすとそに工房.pdf">
+                                <span data-translate="downloadButton">📥 PDFをダウンロード</span>
+                            </a>
+                            <p class="pdf-notice" data-translate="pdfNotice">※このPDFは日本語のみの対応となります</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="goods-card goods-coming-soon">
+                    <p class="coming-soon">🚧 <span data-translate="physicalGoodsComingSoon">実物グッズ（準備中）</span> 🚧</p>
+                    <p data-translate="physicalGoodsDescription">オリジナルグッズは現在準備中です。</p>
+                    <p class="goods-notice" data-translate="physicalGoodsNotice">※このサイトでは商品の販売や注文受付は行っておりません。</p>
                 </div>
             </section>
 

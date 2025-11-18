@@ -464,9 +464,17 @@ const translations = {
         },
         goodsSection: {
             title: 'グッズ',
-            comingSoon: '🚧 準備中です 🚧',
-            description: 'オリジナルグッズや情報が詰まったPDFファイルなどを今後展開予定です。',
-            notice: '※このサイトでは商品の販売や注文受付は行っておりません。展開先は別の外部サービスを使います。'
+            pdfDownloadTitle: '📚 無料ダウンロード資料（日本語版）',
+            pdfDownloadDescription: '初心者から中級者まで対応したRC用語集を無料でダウンロードできます！',
+            pdfGlossaryTitle: 'RC用語集（PDF）',
+            pdfFeature1: '・基礎編① - 35個の基本用語',
+            pdfFeature2: '・中級編② - 35個のセッティング用語',
+            pdfFeature3: '・応用編③ - 55個の競技・専門用語',
+            downloadButton: '📥 PDFをダウンロード',
+            pdfNotice: '※このPDFは日本語のみの対応となります',
+            physicalGoodsComingSoon: '実物グッズ（準備中）',
+            physicalGoodsDescription: 'オリジナルグッズは現在準備中です。',
+            physicalGoodsNotice: '※このサイトでは商品の販売や注文受付は行っておりません。'
         },
         supportSection: {
             title: 'RC支援・サポートについて',
@@ -902,9 +910,17 @@ const translations = {
         },
         goodsSection: {
             title: 'Goods',
-            comingSoon: '🚧 Coming Soon 🚧',
-            description: 'We plan to offer original goods and information-packed PDF files in the future.',
-            notice: '※This site does not handle product sales or order acceptance. We will use external services for distribution.'
+            pdfDownloadTitle: '📚 Free Download Materials (Japanese Only)',
+            pdfDownloadDescription: 'RC Terminology Guide (PDF) is available for free download!',
+            pdfGlossaryTitle: 'RC Terminology Guide (PDF)',
+            pdfFeature1: '・Basics ① - 35 basic terms',
+            pdfFeature2: '・Intermediate ② - 35 setting terms',
+            pdfFeature3: '・Advanced ③ - 55 competition terms',
+            downloadButton: '📥 Download PDF',
+            pdfNotice: '※This PDF is available in Japanese only',
+            physicalGoodsComingSoon: 'Physical Goods (Coming Soon)',
+            physicalGoodsDescription: 'Original goods are currently in preparation.',
+            physicalGoodsNotice: '※This site does not handle product sales or order acceptance.'
         },
         supportSection: {
             title: 'RC Support & Assistance',
@@ -1340,9 +1356,17 @@ const translations = {
         },
         goodsSection: {
             title: '商品',
-            comingSoon: '🚧 准备中 🚧',
-            description: '计划今后推出原创商品和信息丰富的PDF文件等。',
-            notice: '※本网站不处理商品销售或订单受理。将使用其他外部服务进行销售。'
+            pdfDownloadTitle: '📚 免费下载资料（仅日语）',
+            pdfDownloadDescription: 'RC术语集（PDF）免费下载！',
+            pdfGlossaryTitle: 'RC术语集（PDF）',
+            pdfFeature1: '・基础篇① - 35个基本术语',
+            pdfFeature2: '・中级篇② - 35个设置术语',
+            pdfFeature3: '・应用篇③ - 55个竞技・专业术语',
+            downloadButton: '📥 下载PDF',
+            pdfNotice: '※此PDF仅提供日语版本',
+            physicalGoodsComingSoon: '实体商品（准备中）',
+            physicalGoodsDescription: '原创商品目前正在准备中。',
+            physicalGoodsNotice: '※本网站不处理商品销售或订单接受。'
         },
         supportSection: {
             title: 'RC支援与支持',
@@ -1998,14 +2022,32 @@ function setLanguage(lang) {
     const goodsTitle = document.querySelector('#goods .section-title');
     if (goodsTitle) goodsTitle.textContent = '🛍️ ' + trans.goodsSection.title;
     
-    // グッズセクション - コンテンツ
-    const goodsComingSoon = document.querySelector('#goods .coming-soon');
-    const goodsDescription = document.querySelectorAll('#goods .goods-card p')[1];
-    const goodsNotice = document.querySelector('#goods .goods-notice');
+    // グッズセクション - PDFダウンロード
+    const pdfDownloadTitle = document.querySelector('[data-translate="pdfDownloadTitle"]');
+    const pdfDownloadDescription = document.querySelector('[data-translate="pdfDownloadDescription"]');
+    const pdfGlossaryTitle = document.querySelector('[data-translate="pdfGlossaryTitle"]');
+    const pdfFeature1 = document.querySelector('[data-translate="pdfFeature1"]');
+    const pdfFeature2 = document.querySelector('[data-translate="pdfFeature2"]');
+    const pdfFeature3 = document.querySelector('[data-translate="pdfFeature3"]');
+    const downloadButton = document.querySelector('[data-translate="downloadButton"]');
+    const pdfNotice = document.querySelector('[data-translate="pdfNotice"]');
+    const physicalGoodsComingSoon = document.querySelector('[data-translate="physicalGoodsComingSoon"]');
+    const physicalGoodsDescription = document.querySelector('[data-translate="physicalGoodsDescription"]');
+    const physicalGoodsNotice = document.querySelector('[data-translate="physicalGoodsNotice"]');
     
-    if (goodsComingSoon) goodsComingSoon.textContent = trans.goodsSection.comingSoon;
-    if (goodsDescription) goodsDescription.textContent = trans.goodsSection.description;
-    if (goodsNotice) goodsNotice.textContent = trans.goodsSection.notice;
+    if (trans.goodsSection) {
+        if (pdfDownloadTitle) pdfDownloadTitle.textContent = trans.goodsSection.pdfDownloadTitle;
+        if (pdfDownloadDescription) pdfDownloadDescription.textContent = trans.goodsSection.pdfDownloadDescription;
+        if (pdfGlossaryTitle) pdfGlossaryTitle.textContent = trans.goodsSection.pdfGlossaryTitle;
+        if (pdfFeature1) pdfFeature1.textContent = trans.goodsSection.pdfFeature1;
+        if (pdfFeature2) pdfFeature2.textContent = trans.goodsSection.pdfFeature2;
+        if (pdfFeature3) pdfFeature3.textContent = trans.goodsSection.pdfFeature3;
+        if (downloadButton) downloadButton.textContent = trans.goodsSection.downloadButton;
+        if (pdfNotice) pdfNotice.textContent = trans.goodsSection.pdfNotice;
+        if (physicalGoodsComingSoon) physicalGoodsComingSoon.textContent = trans.goodsSection.physicalGoodsComingSoon;
+        if (physicalGoodsDescription) physicalGoodsDescription.textContent = trans.goodsSection.physicalGoodsDescription;
+        if (physicalGoodsNotice) physicalGoodsNotice.textContent = trans.goodsSection.physicalGoodsNotice;
+    }
     
     // RC支援・サポートセクション - タイトル
     const supportTitle = document.querySelector('#support .section-title');
