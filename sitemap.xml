@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Last updated: 2025-11-21 -->
-  <!-- Version: 3.0 -->
+  <!-- Last updated: 2025-11-22 -->
+  <!-- Version: 6.0 (15 models) -->
   
   <!-- メインページ -->
   <url>
@@ -67,9 +67,65 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- 機種詳細ページ：タミヤ DT-03 -->
+  <!-- 機種詳細ページ:タミヤ DT-03 -->
   <url>
     <loc>https://postsoni.github.io/archive/models/tamiya-dt03.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ XV-02 PRO -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-xv02pro.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ CC-02 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-cc02.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ GF-02 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-gf02.html</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TRF421 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-trf421.html</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ DB01 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-db01.html</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TB-05 PRO -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-tb05pro.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TA08 PRO -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta08pro.html</loc>
     <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
