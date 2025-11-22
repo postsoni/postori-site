@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Last updated: 2025-11-22 -->
-  <!-- Version: 7.0 (17 models) -->
+  <!-- Version: 8.0 (18 models) -->
   
   <!-- メインページ -->
   <url>
@@ -94,6 +94,14 @@
   <!-- 機種詳細ページ：タミヤ GF-02 -->
   <url>
     <loc>https://postsoni.github.io/archive/models/tamiya-gf02.html</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ GF-01 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-gf01.html</loc>
     <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
