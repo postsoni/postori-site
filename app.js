@@ -317,7 +317,7 @@ const translations = {
             top: 'TOP', news: '最新の活動報告', gallery: '活動ギャラリー',
             roadmap: '初めての方へ', profile: 'プロフィール', sns: 'SNS',
             activity: 'ブログアクセス', goods: 'グッズ', support: 'RC支援・サポート',
-            testimonials: 'サポートを受けた方の声', faq: 'よくある質問', contact: 'お問い合わせ'
+            testimonials: 'サポートを受けた方の声', faq: 'よくある質問', partners: '提携サイト', contact: 'お問い合わせ'
         },
         sidebar: {
             searchTitle: 'サイト内検索',
@@ -550,6 +550,19 @@ const translations = {
             q15: 'クラブへの加入も検討しているのですが…',
             a15: '自身に合わせたレベルの近場のクラブの紹介や、近場であれば私の所属しているクラブを紹介することも可能です。私のところのクラブでは、コースや飛行場を利用するにあたってビジター料金などもございますので、お気軽に質問お待ちしております。'
         },
+        partnersSection: {
+            title: '提携サイト',
+            intro: 'ぽすとそに工房と提携しているサイトをご紹介します。',
+            rcKoboName: 'RC工房',
+            rcKoboDescription: 'RC工房は、私がクラブで会長を務めさせていただいている模型店で、サーキットや飛行場が同じ敷地内にあります！随時クラブ員も募集しており、平日にも人が来るような和やかなクラブです。ビジター利用も大歓迎です。私の修理などを培っていただけた長年の付き合いのある店主ですので、ぜひ何か分からないことがあった場合はこちらの方を訪れることもお勧めしております！',
+            addressLabel: '住所',
+            rcKoboAddress: '〒002-8054\n北海道札幌市北区篠路町拓北7番地1038',
+            telLabel: 'TEL',
+            faxLabel: 'FAX',
+            rcKoboTel: '011-768-7545',
+            rcKoboFax: '011-768-7550',
+            visitButton: 'RC工房のサイトを見る'
+        },
         contactSection: {
             title: 'お問い合わせ',
             description1: 'お問い合わせは以下のフォームからお願いいたします。',
@@ -770,7 +783,7 @@ const translations = {
             top: 'TOP', news: 'Latest Updates', gallery: 'Gallery',
             roadmap: 'For Beginners', profile: 'Profile', sns: 'SNS',
             activity: 'Blog', goods: 'Goods', support: 'Support',
-            testimonials: 'Testimonials', faq: 'FAQ', contact: 'Contact'
+            testimonials: 'Testimonials', faq: 'FAQ', partners: 'Partners', contact: 'Contact'
         },
         sidebar: {
             searchTitle: 'Site Search',
@@ -1003,6 +1016,19 @@ const translations = {
             q15: 'I\'m considering joining a club...',
             a15: 'We can introduce nearby clubs matching your level, or if nearby, introduce my own club. Our club has visitor fees for using courses and flying fields, so please feel free to ask questions.'
         },
+        partnersSection: {
+            title: 'Partner Sites',
+            intro: 'Introducing sites partnered with Postsoni Workshop.',
+            rcKoboName: 'RC Kobo',
+            rcKoboDescription: 'RC Kobo is a model shop where I serve as club president, with a circuit and airfield on the same premises! We continuously recruit club members and have a friendly atmosphere with visitors even on weekdays. Visitor use is welcome. The shop owner has long been my mentor for repairs, so I highly recommend visiting if you have any questions!',
+            addressLabel: 'Address',
+            rcKoboAddress: '〒002-8054\n7-1038 Takuhoku, Shinoro-cho, Kita-ku, Sapporo, Hokkaido, Japan',
+            telLabel: 'TEL',
+            faxLabel: 'FAX',
+            rcKoboTel: '011-768-7545',
+            rcKoboFax: '011-768-7550',
+            visitButton: 'Visit RC Kobo Website'
+        },
         contactSection: {
             title: 'Contact',
             description1: 'Please contact us through the form below.',
@@ -1223,7 +1249,7 @@ const translations = {
             top: '首页', news: '最新活动', gallery: '画廊',
             roadmap: '新手指南', profile: '简介', sns: '社交媒体',
             activity: '博客', goods: '商品', support: '支援',
-            testimonials: '评价', faq: '常见问题', contact: '联系我们'
+            testimonials: '评价', faq: '常见问题', partners: '合作网站', contact: '联系我们'
         },
         sidebar: {
             searchTitle: '站内搜索',
@@ -1455,6 +1481,19 @@ const translations = {
             a14: '人多了更有活力，所以也可以基于同样理念进行活动！',
             q15: '我在考虑加入俱乐部...',
             a15: '可以介绍符合自己水平的附近俱乐部，如果在附近也可以介绍我所属的俱乐部。我们俱乐部使用赛道和飞行场有访客费用，请随时提问。'
+        },
+        partnersSection: {
+            title: '合作网站',
+            intro: '介绍与Postsoni工作室合作的网站。',
+            rcKoboName: 'RC工房',
+            rcKoboDescription: 'RC工房是我担任俱乐部会长的模型店，赛道和飞行场在同一场地！随时招募俱乐部成员，平日也有人来的和睦俱乐部。也非常欢迎访客使用。店主是培养我维修技术的长年交往的老板，所以如果有什么不明白的地方，也推荐访问这里！',
+            addressLabel: '地址',
+            rcKoboAddress: '〒002-8054\n北海道札幌市北区筱路町拓北7番地1038',
+            telLabel: '电话',
+            faxLabel: '传真',
+            rcKoboTel: '011-768-7545',
+            rcKoboFax: '011-768-7550',
+            visitButton: '访问RC工房网站'
         },
         contactSection: {
             title: '联系我们',
