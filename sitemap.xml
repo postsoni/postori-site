@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Last updated: 2025-11-23 -->
-  <!-- Version: 9.0 (21 models) -->
+  <!-- Last updated: 2025-11-27 -->
+  <!-- Version: 11.0 (28 models) -->
   
   <!-- メインページ -->
   <url>
@@ -43,6 +43,38 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- 機種詳細ページ：タミヤ TA-01 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta01.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TA-02 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta02.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TA-03F -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta03f.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TA-04 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta04.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- 機種詳細ページ：タミヤ TT-02B -->
   <url>
     <loc>https://postsoni.github.io/archive/models/tamiya-tt02b.html</loc>
@@ -59,6 +91,14 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- 機種詳細ページ：タミヤ TA-06 PRO -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta06pro.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- 機種詳細ページ：タミヤ DF-03 -->
   <url>
     <loc>https://postsoni.github.io/archive/models/tamiya-df03.html</loc>
@@ -67,10 +107,26 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- 機種詳細ページ：タミヤ TA-05 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-ta05.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- 機種詳細ページ:タミヤ DT-03 -->
   <url>
     <loc>https://postsoni.github.io/archive/models/tamiya-dt03.html</loc>
     <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 機種詳細ページ：タミヤ TB-03 -->
+  <url>
+    <loc>https://postsoni.github.io/archive/models/tamiya-tb03.html</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
