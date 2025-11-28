@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 22.0 -->
+<!-- RC Archive Project Sitemap Version 23.0 -->
 <!-- Last Updated: 2025-11-28 -->
-<!-- Total Models: 60 -->
+<!-- Total Models: 63 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -130,6 +130,13 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-txt-1.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2004年発売 -->
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-tb02.html</loc>
@@ -156,6 +163,13 @@
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-dt02.html</loc>
         <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-cw-01.html</loc>
+        <lastmod>2025-11-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -313,6 +327,13 @@
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-txt-2.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <url>
