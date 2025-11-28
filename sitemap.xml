@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 17.0 -->
-<!-- Last Updated: 2025-11-27 -->
-<!-- Total Models: 41 -->
+<!-- RC Archive Project Sitemap Version 19.0 -->
+<!-- Last Updated: 2025-11-28 -->
+<!-- Total Models: 48 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -168,6 +168,13 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf501x.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2009年発売 -->
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-trf420.html</loc>
@@ -176,10 +183,24 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf511.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2010年発売 -->
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-trf417.html</loc>
         <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf502x.html</loc>
+        <lastmod>2025-11-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -229,6 +250,13 @@
     </url>
     
     <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf101.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
         <loc>https://postsoni.github.io/archive/models/jrpropo-forza450.html</loc>
         <lastmod>2025-11-27</lastmod>
         <changefreq>monthly</changefreq>
@@ -239,6 +267,13 @@
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-m07-concept.html</loc>
         <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf503.html</loc>
+        <lastmod>2025-11-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -272,6 +307,13 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf102.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2016年発売 -->
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-ta07pro.html</loc>
@@ -288,6 +330,13 @@
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-tb05pro.html</loc>
         <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-trf103.html</loc>
+        <lastmod>2025-11-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
