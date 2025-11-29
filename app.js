@@ -393,7 +393,7 @@ const translations = {
                     item3: '✅ 情報更新 - データ不備があれば随時訂正・更新',
                     item4: '✅ コミュニティ協力 - 機種情報をお持ちの方からの情報提供を歓迎'
                 },
-                current: '現在、3機種のデータを公開中（タミヤ TT-02、京商 カルマートアルファ40、JR PROPO Forza450）\n今後、ラジコンカーを中心に情報を拡充していきます！',
+                current: '現在ラジコンカーを中心に更新中！随時情報を拡充していきます！',
                 button: '📚 RCアーカイブを見る →',
                 request: '💡 情報提供のお願い\nお持ちの機種情報や取扱説明書がございましたら、ぜひご協力ください！\n一緒にRC文化を未来へ残しましょう。'
             }
@@ -846,7 +846,7 @@ const translations = {
                     item3: '✅ Information Updates - Prompt corrections and updates for any data discrepancies',
                     item4: '✅ Community Collaboration - Welcoming information contributions from those with model knowledge'
                 },
-                current: 'Currently publishing data for 3 models (Tamiya TT-02, Kyosho Calmato Alpha 40, JR PROPO Forza450)\nWe will expand information focusing on RC cars in the future!',
+                current: 'Currently updating with focus on RC cars! Information will be continuously expanded!',
                 button: '📚 View RC Archive →',
                 request: '💡 Request for Information\nIf you have model information or instruction manuals, we would appreciate your cooperation!\nLet\'s preserve RC culture for the future together.'
             }
@@ -1299,7 +1299,7 @@ const translations = {
                     item3: '✅ 信息更新 - 如有数据不足，及时订正和更新',
                     item4: '✅ 社区合作 - 欢迎拥有机型信息的人士提供信息'
                 },
-                current: '目前已公开3个机型的数据（Tamiya TT-02、京商 Calmato Alpha 40、JR PROPO Forza450）\n今后将以遥控车为中心扩充信息！',
+                current: '目前以遥控车为中心持续更新中！信息将不断扩充！',
                 button: '📚 查看RC资料库 →',
                 request: '💡 信息提供请求\n如果您有机型信息或使用说明书，请务必与我们合作！\n让我们一起将RC文化留给未来。'
             }
