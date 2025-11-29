@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 23.0 -->
-<!-- Last Updated: 2025-11-28 -->
-<!-- Total Models: 63 -->
+<!-- RC Archive Project Sitemap Version 24.0 -->
+<!-- Last Updated: 2025-11-29 -->
+<!-- Total Models: 67 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -103,6 +103,20 @@
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-ta04.html</loc>
         <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-wr-01.html</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-wr-02.html</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -292,6 +306,13 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-wt-01.html</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2012年発売 -->
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-db-02.html</loc>
@@ -425,6 +446,12 @@
     
     
     <!-- 2017年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-g6-01.html</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     
     <!-- 2018年発売 -->
     
