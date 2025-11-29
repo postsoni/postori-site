@@ -61,33 +61,32 @@ function initFAQ() {
     });
 }
 
-// ===== 訪問者カウンター =====
+// ===== 訪問者カウンター（Google Apps Script版） =====
 function initVisitorCounter() {
     const countElement = document.getElementById('visitorCount');
     const textElement = document.getElementById('visitorText');
     if (!countElement || !textElement) return;
     
+    // 🔧 ここにあなたのGoogle Apps ScriptのURLを貼り付けてください
+    // 例: 'https://script.google.com/macros/s/XXXXX/exec'
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby7ULgMhDO_QeL0svgU4aG79F48Fm8l4qauwgWuaeE8FcKXPvjl87V9gLxMoc-l0Mi3/exec';
+    
     try {
-        // ユニークな訪問者IDを取得または生成
-        let visitorId = localStorage.getItem('postsoni_visitor_id');
+        // 訪問済みチェック
         const hasVisited = localStorage.getItem('postsoni_has_visited');
         
-        if (!visitorId) {
-            // 新規訪問者：一意のIDを生成
-            visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-            localStorage.setItem('postsoni_visitor_id', visitorId);
-        }
-        
-        // カウンターAPIを使用（グローバルカウンター）
-        const namespace = 'postsoni-workshop';
-        const key = 'total-visitors';
-        
         if (!hasVisited) {
-            // 初回訪問の場合のみカウントアップ
-            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            // 初回訪問：カウントアップ
+            // 🔒 refererを送信してセキュリティ強化
+            fetch(`${SCRIPT_URL}?action=increment&referer=${encodeURIComponent(window.location.origin)}`)
                 .then(res => res.json())
                 .then(data => {
-                    const count = data.value;
+                    if (data.error) {
+                        console.error('カウンターエラー:', data.error);
+                        fetchCurrentCount();
+                        return;
+                    }
+                    const count = data.count;
                     countElement.textContent = count;
                     updateVisitorText(count);
                     
@@ -96,19 +95,18 @@ function initVisitorCounter() {
                 })
                 .catch(error => {
                     console.error('カウンターエラー:', error);
-                    // エラー時は現在のカウントを取得
                     fetchCurrentCount();
                 });
         } else {
-            // 既に訪問済みの場合は現在のカウントを取得（カウントアップしない）
+            // 既に訪問済み：現在のカウントを取得（カウントアップしない）
             fetchCurrentCount();
         }
         
         function fetchCurrentCount() {
-            fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+            fetch(`${SCRIPT_URL}?action=get&referer=${encodeURIComponent(window.location.origin)}`)
                 .then(res => res.json())
                 .then(data => {
-                    const count = data.value || 0;
+                    const count = data.count || 0;
                     countElement.textContent = count;
                     updateVisitorText(count);
                 })
