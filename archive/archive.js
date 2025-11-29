@@ -15,10 +15,18 @@ const translations = {
                 manufacturers: "メーカー数",
                 guides: "修理ガイド"
             },
+            databaseLink: {
+                title: "📋 機種情報を検索",
+                button: "📋 機種データベース一覧を見る →",
+                desc: "67機種の詳細情報・修理ガイドを掲載中"
+            },
             search: {
                 title: "🔍 機種を検索",
                 placeholder: "機種名・メーカー・型番で検索...",
-                button: "検索"
+                button: "検索",
+                noticeTitle: "⚠️ お知らせ",
+                noticeText1: "現在、検索機能は<strong>機種データベース一覧</strong>で実装しています。",
+                noticeText2: "下記の検索ではなく、次のページにてお探しいただけると幸いです。"
             },
             manufacturer: {
                 title: "🏭 メーカー別で探す",
@@ -39,7 +47,14 @@ const translations = {
                 planeDesc: "RC Airplane - トレーナー、スケール、グライダーなど"
             },
             era: {
-                title: "📅 年代別で探す"
+                title: "📅 年代別で探す",
+                era1970: "1970年代",
+                era1980: "1980年代",
+                era1990: "1990年代",
+                era2000: "2000年代",
+                era2010: "2010年代",
+                era2020: "2020年代",
+                era2020range: "2020-現在"
             },
             about: {
                 title: "📖 アーカイブについて",
@@ -62,10 +77,18 @@ const translations = {
                 manufacturers: "Manufacturers",
                 guides: "Repair Guides"
             },
+            databaseLink: {
+                title: "📋 Search Model Information",
+                button: "📋 View Model Database →",
+                desc: "67 models with detailed information and repair guides"
+            },
             search: {
                 title: "🔍 Search Models",
                 placeholder: "Search by model name, manufacturer, or model number...",
-                button: "Search"
+                button: "Search",
+                noticeTitle: "⚠️ Notice",
+                noticeText1: "The search function is currently implemented in the <strong>Model Database</strong>.",
+                noticeText2: "Please use the next page instead of the search below."
             },
             manufacturer: {
                 title: "🏭 Browse by Manufacturer",
@@ -86,7 +109,14 @@ const translations = {
                 planeDesc: "RC Airplane - Trainers, Scale models, Gliders, etc."
             },
             era: {
-                title: "📅 Browse by Era"
+                title: "📅 Browse by Era",
+                era1970: "1970s",
+                era1980: "1980s",
+                era1990: "1990s",
+                era2000: "2000s",
+                era2010: "2010s",
+                era2020: "2020s",
+                era2020range: "2020-Present"
             },
             about: {
                 title: "📖 About This Archive",
@@ -109,10 +139,18 @@ const translations = {
                 manufacturers: "制造商数",
                 guides: "维修指南"
             },
+            databaseLink: {
+                title: "📋 搜索机型信息",
+                button: "📋 查看机型数据库 →",
+                desc: "已收录67种机型的详细信息和维修指南"
+            },
             search: {
                 title: "🔍 搜索机型",
                 placeholder: "按机型名、制造商或型号搜索...",
-                button: "搜索"
+                button: "搜索",
+                noticeTitle: "⚠️ 通知",
+                noticeText1: "搜索功能目前已在<strong>机型数据库</strong>中实现。",
+                noticeText2: "请使用下一页，而不是下面的搜索。"
             },
             manufacturer: {
                 title: "🏭 按制造商浏览",
@@ -133,7 +171,14 @@ const translations = {
                 planeDesc: "RC Airplane - 练习机、比例模型、滑翔机等"
             },
             era: {
-                title: "📅 按年代浏览"
+                title: "📅 按年代浏览",
+                era1970: "1970年代",
+                era1980: "1980年代",
+                era1990: "1990年代",
+                era2000: "2000年代",
+                era2010: "2010年代",
+                era2020: "2020年代",
+                era2020range: "2020-至今"
             },
             about: {
                 title: "📖 关于资料库",
