@@ -662,6 +662,13 @@ body > nav.breadcrumb span {
 #modelsTable td {
     padding: 15px;
     border-bottom: 1px solid var(--archive-border);
+    vertical-align: middle;
+}
+
+/* 詳細リンクを含むセルの調整 */
+#modelsTable td:last-child {
+    text-align: center;
+    min-width: 140px;
 }
 
 #modelsTable tbody tr {
@@ -719,15 +726,24 @@ body > nav.breadcrumb span {
 
 /* 詳細リンク */
 .detail-link {
-    color: var(--archive-accent);
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    text-align: center;
+    min-width: 120px;
 }
 
 .detail-link:hover {
-    color: #2980b9;
-    text-decoration: underline;
+    background: linear-gradient(135deg, #2980b9 0%, #2472a4 100%);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 /* データベース説明セクション */
@@ -794,6 +810,16 @@ body > nav.breadcrumb span {
     #modelsTable td {
         padding: 10px 8px;
     }
+    
+    /* スマホでの詳細リンク最適化 */
+    .detail-link {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        min-width: auto;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -813,6 +839,25 @@ body > nav.breadcrumb span {
     .search-section h2,
     .about-section h2 {
         font-size: 1.5rem;
+    }
+    
+    /* 480px以下での詳細ボタン最適化 */
+    .detail-link {
+        padding: 14px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(52, 152, 219, 0.4);
+    }
+    
+    /* テーブルのレイアウト調整 */
+    #modelsTable {
+        font-size: 0.85rem;
+    }
+    
+    #modelsTable th,
+    #modelsTable td {
+        padding: 12px 6px;
     }
 }
 
