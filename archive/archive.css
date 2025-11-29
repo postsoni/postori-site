@@ -1125,7 +1125,7 @@ body > nav.breadcrumb span {
     padding: 20px 50px;
     background-color: white;
     color: #667eea;
-    text-decoration: none;
+    text-decoration: none !important;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.3em;
@@ -1136,6 +1136,13 @@ body > nav.breadcrumb span {
 .database-link-button:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    text-decoration: none !important;
+}
+
+.database-link-button:visited,
+.database-link-button:active,
+.database-link-button:focus {
+    text-decoration: none !important;
 }
 
 .database-link-desc {
