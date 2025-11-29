@@ -378,6 +378,11 @@ const translations = {
             note: '※目安のSTEPです。それぞれの遊び方のニーズに合わせてどこまでも真摯に向き合います。いつでもお問い合わせフォームからご連絡ください。'
         },
         archive: {
+            banner: {
+                title: 'ラジコンデータベース - 全てのラジコンを網羅するため日々更新中！',
+                subtitle: '絶版から現代まで、18年間の修理実績に基づく詳細ガイド',
+                button: 'アーカイブを見る →'
+            },
             main: {
                 title: '📚 RCアーカイブ',
                 subtitle: '絶版から現代までのラジコン機種を網羅したデータベース\nRC文化の歴史を次の世代へ継承するタイムカプセル',
@@ -826,6 +831,11 @@ const translations = {
             note: '※This is a guideline. We sincerely work with you according to your play style needs. Please contact us anytime through the contact form.'
         },
         archive: {
+            banner: {
+                title: 'RC Database - Updated Daily to Cover All RC Models!',
+                subtitle: 'Detailed guides based on 18 years of repair experience, from discontinued to modern models',
+                button: 'View Archive →'
+            },
             main: {
                 title: '📚 RC Archive',
                 subtitle: 'A comprehensive database of RC models from discontinued to modern\nA time capsule preserving RC culture for the next generation',
@@ -1274,6 +1284,11 @@ const translations = {
             note: '※这是一个指南。我们会根据每个人的游玩方式需求真诚地应对。请随时通过联系表单与我们联系。'
         },
         archive: {
+            banner: {
+                title: '遥控模型数据库 - 每日更新以覆盖所有RC模型！',
+                subtitle: '基于18年维修实绩的详细指南，从绝版到现代车型',
+                button: '查看资料库 →'
+            },
             main: {
                 title: '📚 RC资料库',
                 subtitle: '从绝版到现代的全面遥控车模型数据库\n将RC文化历史传承给下一代的时间胶囊',
@@ -2566,6 +2581,17 @@ function setLanguage(lang) {
         if (reloadWindowsKeys) reloadWindowsKeys.textContent = trans.topSection.reloadWindowsKeys;
         if (reloadMac) reloadMac.textContent = trans.topSection.reloadMac;
         if (reloadMacKeys) reloadMacKeys.textContent = trans.topSection.reloadMacKeys;
+    }
+    
+    // RCアーカイブバナーの翻訳
+    const archiveBannerTitle = document.querySelector('[data-i18n="archive.banner.title"]');
+    const archiveBannerSubtitle = document.querySelector('[data-i18n="archive.banner.subtitle"]');
+    const archiveBannerButton = document.querySelector('[data-i18n="archive.banner.button"]');
+    
+    if (trans.archive && trans.archive.banner) {
+        if (archiveBannerTitle) archiveBannerTitle.textContent = trans.archive.banner.title;
+        if (archiveBannerSubtitle) archiveBannerSubtitle.textContent = trans.archive.banner.subtitle;
+        if (archiveBannerButton) archiveBannerButton.textContent = trans.archive.banner.button;
     }
     
     // RCアーカイブセクションの翻訳
