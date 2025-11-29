@@ -751,6 +751,15 @@ body > nav.breadcrumb span {
     margin: 30px 0;
 }
 
+.database-description-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
 /* データベースメインコンテンツ */
 .database-main {
     max-width: 1200px;
@@ -769,6 +778,24 @@ body > nav.breadcrumb span {
    レスポンシブデザイン
 ======================================== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .database-main {
+        padding: 30px 15px;
+    }
+    
+    .search-filter {
+        padding: 20px 15px;
+        margin: 30px 0;
+    }
+    
+    .database-description-text {
+        padding: 15px;
+        font-size: 1em;
+    }
+    
     .archive-title {
         font-size: 2rem;
     }
@@ -785,13 +812,36 @@ body > nav.breadcrumb span {
         flex-direction: column;
     }
     
+    /* データベースリンクセクション */
+    .database-link-section {
+        padding: 20px 15px;
+        margin: 30px 0;
+    }
+    
+    .database-link-title {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .database-link-button {
+        padding: 16px 35px;
+        font-size: 1.1em;
+    }
+    
+    .database-link-desc {
+        font-size: 0.9em;
+        margin-top: 12px;
+    }
+    
     .card-grid,
     .card-grid-large {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .era-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
     
     .about-content {
@@ -799,6 +849,10 @@ body > nav.breadcrumb span {
     }
     
     .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .archive-stats {
         grid-template-columns: 1fr;
     }
     
@@ -823,6 +877,24 @@ body > nav.breadcrumb span {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .database-main {
+        padding: 25px 12px;
+    }
+    
+    .search-filter {
+        padding: 18px 12px;
+        margin: 25px 0;
+    }
+    
+    .database-description-text {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    
     .archive-header {
         padding: 40px 20px 30px;
     }
@@ -839,6 +911,30 @@ body > nav.breadcrumb span {
     .search-section h2,
     .about-section h2 {
         font-size: 1.5rem;
+    }
+    
+    /* データベースリンクセクション */
+    .database-link-section {
+        padding: 18px 12px;
+        margin: 25px 0;
+    }
+    
+    .database-link-title {
+        font-size: 1.2em;
+        margin-bottom: 12px;
+    }
+    
+    .database-link-button {
+        padding: 14px 30px;
+        font-size: 1em;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .database-link-desc {
+        font-size: 0.85em;
+        margin-top: 10px;
     }
     
     /* 480px以下での詳細ボタン最適化 */
@@ -884,3 +980,45 @@ body > nav.breadcrumb span {
         border: 1px solid #ccc;
     }
 }
+/* ========================================
+   データベースリンクセクション
+======================================== */
+.database-link-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.database-link-title {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.database-link-button {
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: white;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.3em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.database-link-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.database-link-desc {
+    color: white;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
