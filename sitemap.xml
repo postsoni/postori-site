@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 24.0 -->
-<!-- Last Updated: 2025-11-29 -->
-<!-- Total Models: 67 -->
+<!-- RC Archive Project Sitemap Version 25.0 -->
+<!-- Last Updated: 2025-12-03 -->
+<!-- Total Models: 73 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -475,6 +475,27 @@
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-m01.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-m02.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-m03.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <url>
