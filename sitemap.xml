@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 25.0 -->
+<!-- RC Archive Project Sitemap Version 26.0 -->
 <!-- Last Updated: 2025-12-03 -->
-<!-- Total Models: 73 -->
+<!-- Total Models: 76 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -498,6 +498,26 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- 2012年発売 -->
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-rm01.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2015年発売 -->
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-mf01x.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2019年発売 -->
+    
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-m08.html</loc>
         <lastmod>2025-11-27</lastmod>
@@ -509,6 +529,18 @@
     
     
     <!-- 2022年発売 -->
+    
+    <!-- 2023年発売 -->
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-mb01.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    
+    <!-- 2024年発売 -->
     
     <url>
         <loc>https://postsoni.github.io/archive/models/tamiya-xv02pro.html</loc>
