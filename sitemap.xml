@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 26.0 -->
+<!-- RC Archive Project Sitemap Version 27.0 -->
 <!-- Last Updated: 2025-12-03 -->
-<!-- Total Models: 76 -->
+<!-- Total Models: 80 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -29,6 +29,38 @@
     </url>
     
     <!-- 個別機種ページ（発売年順） -->
+    
+    <!-- 1998年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-tg10-mk1.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2015年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-tg10-mk2-fz.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2016年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-tg10-mk2-fn.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2022年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/tamiya-tg10-mk2-fz-2022.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     
     <!-- 1991年発売 -->
     <url>
