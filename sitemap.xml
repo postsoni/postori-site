@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RC Archive Project Sitemap Version 30.0 -->
+<!-- RC Archive Project Sitemap Version 33.0 -->
 <!-- Last Updated: 2025-12-04 -->
-<!-- Total Models: 88 -->
+<!-- Total Models: 97 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- トップページ -->
@@ -102,9 +102,75 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-tomahawk.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- 2022年発売 -->
     <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-optima.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 2019年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-ultima.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 1987年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-burns-4wd.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-grandprix-racer.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-demika-series.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-zr1-corvette.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-usa-1-nitro-crusher.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
         <loc>https://postsoni.github.io/archive/models/kyosho-fantom-ep-4wd-ext.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 1984年発売 -->
+    <url>
+        <loc>https://postsoni.github.io/archive/models/kyosho-progress-4wds.html</loc>
         <lastmod>2025-12-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
